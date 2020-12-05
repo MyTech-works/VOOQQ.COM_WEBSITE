@@ -1,0 +1,284 @@
+﻿@model VOOQQ_APP.Models.MyAccountModel
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Import jQuery before export.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+<!--Data Table-->
+<script type="text/javascript" src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+@*<script type="text/javascript" src=" https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>*@
+
+<!--Export table buttons-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+
+<!--Export table button CSS-->
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+@*<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">*@
+
+<style>
+    .adstatus {
+        width: 100%;
+    }
+</style>
+
+
+<div id="content" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-3 page-sidebar">
+                <aside>
+                    <div class="sidebar-box">
+                        <div class="user">
+                            <figure>
+                                <a href="#"><img src="\Assets\assets\img\author\img1.jpg" alt=""></a>
+                            </figure>
+                            <div class="usercontent">
+                                @if (User.Identity.GetUserName() != null)
+                                {
+                                    var id = User.Identity.GetUserName();
+
+                                    if (id == "info@vooqq.com")
+                                    {
+                                        <h4>Administrator</h4>
+                                        <p>Hi ! @User.Identity.GetUserName()</p>
+
+                                    }
+                                    else
+                                    {
+
+                                        <h3>User</h3>
+                                        <p>Hi !  @User.Identity.GetUserName()</p>
+                                    }
+
+                                }
+
+                                else
+                                {
+
+                                }
+
+
+                            </div>
+                        </div>
+
+                        <nav class="navdashboard">
+
+                            @if (User.Identity.GetUserName() != null)
+                            {
+                                var id = User.Identity.GetUserName();
+
+                                if (id == "info@vooqq.com")
+                                {
+                                    <ul>
+                                        <li>
+                                            <a class="active" href="/MyAccount/Dashboard">
+                                                <i class="lni-dashboard"></i>
+                                                <span>Dashboard</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/MyAccount/Index">
+                                                <i class="lni-layers"></i>
+                                                <span>All Adds</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/MyAccount/AddsManage">
+                                                <i class="lni-envelope"></i>
+                                                <span>Manage Adds</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/MyAccount/views">
+                                                <i class="lni-eye"></i>
+                                                <span>Views</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/MyAccount/Payments">
+                                                <i class="lni-wallet"></i>
+                                                <span>Payments</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/MyAccount/UsersList">
+                                                <i class="lni-heart"></i>
+                                                <span>All Users</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="lni-star"></i>
+                                                <span>Privacy Settings</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="lni-cog"></i>
+                                                <span>Profile Settings</span>
+                                            </a>
+                                        </li>
+                                        <li>
+
+                                            <a href="javascript:document.getElementById('logoutForm').submit()">
+                                                <i class="lni-enter"></i>
+
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                }
+                                else
+                                {
+
+                                    <ul>
+                                        <li>
+                                            <a href="dashboard.html">
+                                                <i class="#"></i>
+                                                <span>Dashboard</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="active" href="/MyAccount/Index">
+                                                <i class="lni-layers"></i>
+                                                <span>My Ads</span>
+                                            </a>
+                                        </li>
+
+
+                                        <li>
+                                            <a href="#">
+                                                <i class="lni-star"></i>
+                                                <span>Privacy Settings</span>
+                                            </a>
+                                        <li>
+                                            <a href="#">
+                                                <i class="lni-cog"></i>
+                                                <span>Profile Settings</span>
+                                            </a>
+                                        </li>
+                                        </li>
+                                        <li>
+
+                                            <a href="javascript:document.getElementById('logoutForm').submit()">
+                                                <i class="lni-enter"></i>
+
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                }
+
+                            }
+
+                            else
+                            {
+
+                            }
+
+                        </nav>
+                    </div>
+                    <div class="widget">
+                        <h4 class="widget-title">Advertisement</h4>
+                        <div class="add-box">
+                            <img class="img-fluid" src="assets\img\img1.jpg" alt="">
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-9">
+                <div class="page-content">
+                    <div class="inner-box">
+                        <div class="dashboard-box">
+                            <h2 class="dashbord-title">All Ads</h2>
+                        </div>
+                        <div class="dashboard-wrapper">
+
+                            <br />
+                            <br />
+
+                            <table id="myaccountlist" class="table table-responsive dashboardtable tablemyads">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                          User  Id
+                                        </th>
+                                        <th>
+                                            User Name
+                                        </th>
+
+                                        <th>
+                                            Email
+                                        </th>
+                                       
+                                        <th>
+                                            Action
+
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    @foreach (var item in ViewBag.data)
+                                    {
+                                        <tr data-category="active">
+
+                                           
+                                            <td data-title="Title">
+                                                <h3>  @item.Id</h3>
+
+                                            </td>
+                                            <td data-title="Ad Status">
+                                               
+                                                <span class="adstatus adstatusexpired">  @item.UserName</span>
+                                            </td>
+
+                                            <td data-title="Title">
+                                                <h3>@item.Email</h3>
+
+                                            </td>
+
+                                            <td data-title="Action">
+                                                <div class="btns-actions">
+                                                 
+                                                          <a class="btn-action btn-delete" href="/Myaccount/Delete/@item.Id"><i class="lni-trash"></i></a>
+                                                    
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" language="javascript" class="init">
+    $(document).ready(function () {
+        $('#myaccountlist').DataTable();
+    });
+</script>

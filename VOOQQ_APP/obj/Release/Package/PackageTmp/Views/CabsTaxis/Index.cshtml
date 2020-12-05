@@ -1,0 +1,301 @@
+﻿@model VOOQQ_APP.Models.CabsTaxi
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_SearchLayout.cshtml";
+}
+
+
+<!--Import jQuery before export.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+<!--Data Table-->
+<script type="text/javascript" src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+@*<script type="text/javascript" src=" https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>*@
+
+<!--Export table buttons-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+
+<!--Export table button CSS-->
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+@*<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">*@
+
+<div id="content" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-12 col-xs-12 page-sidebar">
+                <aside>
+                    <div class="widget_search">
+                        <form role="search" id="search-form">
+                            @{ Html.EnableClientValidation(false); }
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-12">
+                                    @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.VehicleCategoryId, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(m => m.VehicleCategoryId,
+                        new SelectList(ViewBag.VehicleCategory, "VehicleCategoryId", "VehicleCategoryName"),
+                        "Select Category",
+                        new { @class = "form-control input-height", @onchange="FillCity()" })
+
+                                    @Html.ValidationMessageFor(model => model.VehicleCategoryId, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.VehicleTypeId, htmlAttributes: new { @class = "control-label col-md-6" })
+                                <div class="col-md-12">
+                                    @Html.DropDownListFor(m => m.VehicleTypeId,
+                        new SelectList(ViewBag.VehicleType, "VehicleTypeId", "VehicleTypeName"),
+                        "Select Type",
+                        new { @class = "form-control input-height", @onchange="FillCity()" })
+
+                                    @Html.ValidationMessageFor(model => model.VehicleTypeId, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.SeatingCapacity, htmlAttributes: new { @class = "control-label col-md-8" })
+                                <div class="col-md-12">
+                                    @Html.EditorFor(model => model.SeatingCapacity, new { htmlAttributes = new { @class = "form-control", @maxlength = "150", placeholder = "" } })
+                                    @Html.ValidationMessageFor(model => model.SeatingCapacity, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+                            <input id="VId" type="hidden" name="VId" value="7" />
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-12">
+                                    <input type="submit" value="Search" class="btn btn-default" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="widget categories">
+                        <h4 class="widget-title">All Categories</h4>
+                        <ul class="categories-list">
+                            <li>
+                                <a href="/Forsales/Index?prime=1&&vid=1">
+                                    <i class="lni lni-revenue"></i>
+                                    FOR SALE<span class="category-counter"></span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Businesses/Index?prime=1&&vid=2">
+                                    <i class="lni lni-stats-up"></i>
+                                    BUSINESS LIST  <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Matrimonies/Index?prime=1&&vid=3">
+                                    <i class="lni-heart"></i>
+                                    MATRIMONY <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Services/Index?prime=1&&vid=4">
+                                    <i class="lni lni-handshake"></i>
+                                    SERVICES <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Jobs/Index?prime=1&&vid=5">
+                                    <i class="lni-briefcase"></i>
+                                    JOB <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/HotelRooms/Index?prime=1&&vid=6">
+                                    <i class="lni lni-restaurant"></i>
+                                    HOTEL ROOMS <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/CabsTaxis/Index?prime=1&&vid=7">
+                                    <i class="lni-car"></i>
+                                    CAB/TAXI <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Auditoriums/Index?prime=1&&vid=8">
+                                    <i class="lni lni-apartment"></i>
+                                    AUDITORIUMS <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Educations/Index?prime=1&&vid=9">
+                                    <i class="lni lni-graduation"></i>
+                                    EDUCATION <span class="category-counter"></span>
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="/RepairMechanics/Index?prime=1&&vid=10">
+                                    <i class="lni lni-cog"></i>
+
+                                    REPAIR AND MECHANICS<span class="category-counter"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Teachers/Index?prime=1&&vid=11">
+                                    <i class="lni lni-blackboard"></i>
+
+                                    TEACHERS<span class="category-counter"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Doctors/Index?prime=1&&vid=12">
+                                    <i class="lni lni-sthethoscope"></i>
+                                    DOCTORS<span class="category-counter"></span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="widget">
+                        <h4 class="widget-title">Advertisement</h4>
+                        <div class="add-box">
+                            <img class="img-fluid" src="assets\img\img1.jpg" alt="">
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="col-lg-9 col-md-12 col-xs-12 page-content">
+                <div class="product-filter">
+
+                    <h3>Car and Taxi Search</h3>
+                </div>
+
+                <div class="adds-wrapper">
+                    <div class="tab-content">
+
+
+
+                        <div id="list-view" class="tab-pane fade active show">
+                            <div class="row">
+
+                                <table id="myaccountlist" class="table table-responsive dashboardtable tablemyads">
+                                    <thead>
+                                        <tr>
+
+                                            <th>
+                                                Action
+
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+
+                                        @foreach (var item in ViewBag.data)
+                                        {
+                                            <tr data-category="active">
+
+
+
+                                                <td data-title="Action">
+                                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                        <div class="featured-box">
+                                                            <figure>
+                                                                <div class="icon">
+                                                                    <i class="lni-heart"></i>
+                                                                </div>
+                                                                <a href="#"><img class="img-fluid" style="width:300px;height:200px" src="@item.Image1" alt=""></a>
+                                                            </figure>
+                                                            <div class="feature-content">
+                                                                <div class="product">
+                                                                    <a href="#"><i class="lni-folder"></i> @item.VehicleCategoryName</a>
+                                                                </div>
+                                                                <h4><a href="/CabsTaxis/Details/@item.CabTaxiId">@item.Title</a></h4>
+                                                                <span>@item.Date</span>
+                                                                <ul class="address">
+                                                                    <li>
+                                                                        <a href="#"><i class="lni-map-marker"></i>@item.Location</a>
+                                                                    </li>
+                                                                    @*<li>
+                                                                        <a href="#"><i class="lni-alarm-clock"></i> May 18, 2018</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#"><i class="lni-user"></i> Will Ernest</a>
+                                                                    </li>*@
+                                                                    <li>
+                                                                        <a href="#"><i class="lni-package"></i> @item.VehicleTypes</a>
+                                                                    </li>
+                                                                </ul>
+                                                                <div class="listing-bottom">
+                                                                    <h3 class="price float-left">Min :@item.MinimumCharge</h3>
+                                                                    <a href="account-myads.html" class="btn-verified float-right"><i class="lni-check-box"></i> Verified Ad</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        }
+
+                                    </tbody>
+                                </table>
+
+                                @foreach (var item in ViewBag.data)
+                                {
+
+
+
+
+
+
+
+
+                                }
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script type="text/javascript" language="javascript" class="init">
+    $(document).ready(function () {
+        $('#myaccountlist').DataTable();
+        $("#myaccountlist thead").remove();
+    });
+</script>
+
+<script type="text/javascript" language="javascript" class="init">
+    $(document).ready(function () {
+        $('#myaccountlist1').DataTable();
+    });
+</script>

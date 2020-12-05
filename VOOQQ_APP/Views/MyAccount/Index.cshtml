@@ -1,0 +1,879 @@
+﻿@model VOOQQ_APP.Models.MyAccountModel
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Import jQuery before export.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+<!--Data Table-->
+<script type="text/javascript" src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+@*<script type="text/javascript" src=" https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>*@
+
+<!--Export table buttons-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+
+<!--Export table button CSS-->
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+
+@*<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">*@
+
+<div id="content" class="section-padding">
+    <div class="container">
+
+        <div class="row">
+           
+            <div class="col-sm-12 col-md-4 col-lg-3 page-sidebar">
+
+                <aside>
+                    <div class="sidebar-box">
+                        <div class="user">
+                            <figure>
+                                <a href="#"><img src="\Assets\assets\img\author\img1.jpg" alt=""></a>
+                            </figure>
+                            <div class="usercontent">
+                                @if (User.Identity.GetUserName() != null)
+                                {
+                                    var id = User.Identity.GetUserName();
+
+                                    if (id == "info@vooqq.com")
+                                    {
+                                        <h4>Administrator</h4>
+                                        <p>Hi ! @User.Identity.GetUserName()</p>
+
+                                    }
+                                    else
+                                    {
+
+                                        <h3>User</h3>
+                                        <p>Hi !  @User.Identity.GetUserName()</p>
+                                    }
+
+                                }
+
+                                else
+                                {
+
+                                }
+
+
+                            </div>
+                        </div>
+
+                        <nav class="navdashboard">
+
+                            @if (User.Identity.GetUserName() != null)
+                            {
+                                var id = User.Identity.GetUserName();
+
+                                if (id == "info@vooqq.com")
+                                {
+                                    <ul>
+                                        <li>
+                                            <a class="active" href="/MyAccount/Dashboard">
+                                                <i class="lni-dashboard"></i>
+                                                <span>Dashboard</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/MyAccount/Index">
+                                                <i class="lni-layers"></i>
+                                                <span>All Adds</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/MyAccount/AddsManage">
+                                                <i class="lni-envelope"></i>
+                                                <span>Manage Adds</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/MyAccount/views">
+                                                <i class="lni-eye"></i>
+                                                <span>Views</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/MyAccount/Payments">
+                                                <i class="lni-wallet"></i>
+                                                <span>Payments</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/MyAccount/UsersList">
+                                                <i class="lni-heart"></i>
+                                                <span>All Users</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="lni-star"></i>
+                                                <span>Privacy Settings</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="lni-cog"></i>
+                                                <span>Profile Settings</span>
+                                            </a>
+                                        </li>
+                                        <li>
+
+                                            <a href="javascript:document.getElementById('logoutForm').submit()">
+                                                <i class="lni-enter"></i>
+
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                }
+                                else
+                                {
+
+                                    <ul>
+                                        <li>
+                                            <a href="/MyAccount/dashboard">
+                                                <i class="#"></i>
+                                                <span>Dashboard</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="active" href="/MyAccount/Index">
+                                                <i class="lni-layers"></i>
+                                                <span>My Ads</span>
+                                            </a>
+                                        </li>
+
+
+                                        <li>
+                                            <a href="#">
+                                                <i class="lni-star"></i>
+                                                <span>Privacy Settings</span>
+                                            </a>
+                                        <li>
+                                            <a href="#">
+                                                <i class="lni-cog"></i>
+                                                <span>Profile Settings</span>
+                                            </a>
+                                        </li>
+                                        </li>
+                                        <li>
+
+                                            <a href="javascript:document.getElementById('logoutForm').submit()">
+                                                <i class="lni-enter"></i>
+
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                }
+
+                            }
+
+                            else
+                            {
+
+                            }
+
+                        </nav>
+                    </div>
+                    <div class="widget">
+                        <h4 class="widget-title">Advertisement</h4>
+                        <div class="add-box">
+                            <img class="img-fluid" src="assets\img\img1.jpg" alt="">
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="col-sm-12 col-md-8 col-lg-9">
+                <div style="color:forestgreen">
+                    <strong>Notice!</strong> Please activate your  adds to view in the search list.
+                </div>
+
+                <div class="page-content">
+                    <div class="inner-box">
+                        <div class="dashboard-box">
+                            <h2 class="dashbord-title">All Ads</h2>
+                        </div>
+                        @*<form role="search" id="search-form">
+            <div class="form-group">
+
+                <div class="col-md-12">
+                    <div class="select" name="VId" id="VId">
+                        <select>
+                            <option value="0">
+                                Select Category
+                            </option>
+                            <option value="1">
+                                FOR SALE
+                            </option>
+                            <option value="2">
+                                BUSINESS LIST
+                            </option>
+                            <option value="3">
+                                MATRIMONY
+                            </option>
+                            <option value="4">
+                                SERVICES
+                            </option>
+                            <option value="5">
+                                JOB
+                            </option>
+                            <option value="6">
+                                HOTEL ROOMS
+                            </option>
+                            <option value="7">
+                                CAB/TAXI
+                            </option>
+                            <option value="8">
+                                AUDITORIUMS
+                            </option>
+                            <option value="9">
+                                EDUCATION
+                            </option>
+                            <option value="10">
+                                REPAIR AND MECHANICS
+                            </option>
+                            <option value="11">
+                                TEACHERS
+                            </option>
+                            <option value="12">
+                                DOCTORS
+                            </option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <input id="VId" type="hidden" name="VId" value="11" />
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Search" class="btn btn-default" />
+                </div>
+            </div>
+        </form>*@
+
+                        <div class="dashboard-wrapper">
+
+                            <br />
+                            <br />
+
+                            <table id="myaccountlist" class="table table-responsive dashboardtable tablemyads">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Image
+                                        </th>
+                                        <th>
+                                            Title
+                                        </th>
+
+                                        <th>
+                                            Category
+                                          
+                                        </th>
+
+
+                                        <th>
+                                            Location
+                                        </th>
+                                        <th>
+                                            Action
+
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    @foreach (var item in ViewBag.data)
+                                    {
+                                        <tr data-category="active">
+
+                                            <td class="photo"><img class="img-fluid" src="@item.Image1" alt=""></td>
+                                            <td data-title="Title">
+                                                <h3>  @item.Title</h3>
+
+                                            </td>
+                                            <td data-title="Title">
+
+
+
+                                                @if (item.VId == "1")
+                                                {
+                                                    <a href="/Forsales/Index?Vid=1">
+                                                        <div class="icon-box">
+                                                            <div class="icon">
+                                                                <i class="lni lni-revenue"></i>
+                                                            </div>
+                                                            <h6>FOR SALE   </h6>
+                                                        </div>
+                                                    </a>
+                                                }
+                                                else if (item.VId == "2")
+                                                {
+                                                    <a href="/Businesses/Index?Vid=2">
+                                                        <div class="icon-box">
+                                                            <div class="icon">
+                                                                <i class="lni lni-stats-up"></i>
+                                                            </div>
+                                                            <h6>BUSINESS LIST </h6>
+                                                        </div>
+                                                    </a>
+                                                }
+                                                else if (item.VId == "3")
+                                                {
+                                                    <a href="/Matrimonies/Index?Vid=3">
+                                                        <div class="icon-box">
+                                                            <div class="icon">
+                                                                <i class="lni-heart"></i>
+                                                            </div>
+                                                            <h6>MATRIMONY </h6>
+                                                        </div>
+                                                    </a>
+                                                }
+                                                else if (item.VId == "4")
+                                                { <a href="/Services/Index?Vid=4">
+                                                        <div class="icon-box">
+                                                            <div class="icon">
+                                                                <i class="lni lni-handshake"></i>
+                                                            </div>
+                                                            <h6>SERVICES</h6>
+                                                        </div>
+                                                    </a>
+                                                }
+                                                else if (item.VId == "5")
+                                                {
+                                                    <a href="/Jobs/Index?Vid=5">
+                                                        <div class="icon-box">
+                                                            <div class="icon">
+                                                                <i class="lni-briefcase"></i>
+                                                            </div>
+                                                            <h6>JOB</h6>
+                                                        </div>
+                                                    </a>
+                                                }
+                                                else if (item.VId == "6")
+                                                {
+                                                    <a href="/HotelRooms/Index?Vid=6">
+                                                        <div class="icon-box">
+                                                            <div class="icon">
+                                                                <i class="lni lni-restaurant"></i>
+                                                            </div>
+                                                            <h6>HOTEL ROOMS </h6>
+
+                                                        </div>
+                                                    </a>
+                                                }
+                                                else if (item.VId == "7")
+                                                {
+                                                    <a href="/CabsTaxis/Index?Vid=7">
+                                                        <div class="icon-box">
+                                                            <div class="icon">
+                                                                <i class="lni-car"></i>
+                                                            </div>
+                                                            <h6>CAB/TAXI </h6>
+                                                        </div>
+                                                    </a>
+                                                }
+                                                else if (item.VId == "8")
+                                                {
+                                                    <a href="/Auditoriums/Index?Vid=8">
+                                                        <div class="icon-box">
+                                                            <div class="icon">
+                                                                <i class="lni lni-apartment"></i>
+                                                            </div>
+                                                            <h6>AUDITORIUMS</h6>
+                                                        </div>
+                                                    </a>
+                                                }
+                                                else if (item.VId == "9")
+                                                {
+                                                    <a href="/Educations/Index?Vid=9">
+                                                        <div class="icon-box">
+                                                            <div class="icon">
+                                                                <i class="lni lni-graduation"></i>
+                                                            </div>
+                                                            <h6>EDUCATION </h6>
+                                                        </div>
+                                                    </a>
+                                                }
+                                                else if (item.VId == "10")
+                                                {
+                                                    <a href="/RepairMechanics/Index?Vid=10">
+                                                        <div class="icon-box">
+                                                            <div class="icon">
+                                                                <i class="lni lni-cog"></i>
+                                                            </div>
+                                                            <h6>REPAIR AND MECHANICS</h6>
+                                                        </div>
+                                                    </a>
+                                                }
+                                                else if (item.VId == "11")
+                                                {
+                                                    <a href="/Teachers/Index?Vid=11">
+                                                        <div class="icon-box">
+                                                            <div class="icon">
+                                                                <i class="lni lni-blackboard"></i>
+
+                                                            </div>
+                                                            <h6>TEACHERS  </h6>
+                                                        </div>
+                                                    </a>
+                                                }
+                                                else if (item.VId == "12")
+                                                {
+                                                    <a href="/Doctors/Index?Vid=12">
+                                                        <div class="icon-box">
+                                                            <div class="icon">
+                                                                <i class="lni lni-sthethoscope"></i>
+                                                            </div>
+                                                            <h6>DOCTORS</h6>
+                                                        </div>
+                                                    </a>
+                                                }
+
+                                            </td>
+
+
+                            <td data-title="Title">
+                                <h3>@item.Location</h3>
+
+                            </td>
+
+                            <td data-title="Action">
+                                <div class="btns-actions">
+                                    @if (item.VId == "1")
+                                    {
+                                        <a class="btn-action btn-view" href="/Forsales/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                        <a class="btn-action btn-edit" href="/Forsales/Edit/@item.BusinessId"><i class="lni-pencil"></i></a>
+                                        <a class="btn-action btn-delete" href="/Forsales/Delete/@item.BusinessId"><i class="lni-trash"></i></a>
+
+                                        if (item.status != "1")
+                                        {
+                                            <a class="btn-action" href="/Forsales/ViewPlan?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=9900"><i><span class="adstatus adstatusactive">PAY 99</span></i></a>
+
+                                        }
+                                        else
+                                        {
+                                            <ul class="sign-in">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="/Forsales/ViewPlan?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-notepad"></i> Upgrade</a>
+                                                    @*<div class="dropdown-menu">
+
+                                                        <a class="dropdown-item" href="/Forsales/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=39900"><i class="lni-wallet"></i> Silver PAY 399/-</a>
+                                                        <a class="dropdown-item" href="/Forsales/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=59900"><i class="lni-wallet"></i> Golden PAY 599/-</a>
+                                                        <a class="dropdown-item" href="/Forsales/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=99900"><i class="lni-wallet"></i> Platinum PAY 999/-</a>
+                                                        <a class="dropdown-item" href="/Forsales/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=159900"><i class="lni-wallet"></i>Diamond PAY 1599/-</a>
+
+
+
+                                                    </div>*@
+                                                </li>
+                                            </ul>
+
+                                        }
+
+                                    }
+                                    else if (item.VId == "2")
+                                    {
+                                        <a class="btn-action btn-view" href="/Businesses/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                        <a class="btn-action btn-edit" href="/Businesses/Edit/@item.BusinessId"><i class="lni-pencil"></i></a>
+                                        <a class="btn-action btn-delete" href="/Businesses/Delete/@item.BusinessId"><i class="lni-trash"></i></a>
+
+                                        if (item.status != "1")
+                                        {
+                                            <a class="btn-action" href="/Businesses/Pay?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=59900"><i><span class="adstatus adstatusactive">PAY 599</span></i></a>
+
+                                        }
+                                        else
+                                        {
+                                            <ul class="sign-in">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-notepad"></i> Upgrade</a>
+                                                    <div class="dropdown-menu">
+
+                                                        <a class="dropdown-item" href="/Businesses/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=99900"><i class="lni-wallet"></i> Silver PAY 999/-</a>
+                                                        <a class="dropdown-item" href="/Businesses/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=199900"><i class="lni-wallet"></i> Golden PAY 1999/-</a>
+                                                        <a class="dropdown-item" href="/Businesses/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=499900"><i class="lni-wallet"></i> Platinum PAY 4999/-</a>
+                                                        <a class="dropdown-item" href="/Businesses/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=899900"><i class="lni-wallet"></i>Diamond PAY 8999/-</a>
+
+
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        }
+
+
+
+
+                                    }
+                                    else if (item.VId == "3")
+                                    {
+                                        <a class="btn-action btn-view" href="/Matrimonies/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                        <a class="btn-action btn-edit" href="/Matrimonies/Edit/@item.BusinessId"><i class="lni-pencil"></i></a>
+                                        <a class="btn-action btn-delete" href="/Matrimonies/Delete/@item.BusinessId"><i class="lni-trash"></i></a>
+                                        if (item.status != "1")
+                                        { <a class="btn-action" href="/Matrimonies/Pay?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=59900"><i><span class="adstatus adstatusactive">PAY 599</span></i></a>
+
+                                        }
+                                        else
+                                        {
+                                            <ul class="sign-in">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-notepad"></i> Upgrade</a>
+                                                    <div class="dropdown-menu">
+
+                                                        <a class="dropdown-item" href="/Matrimonies/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=99900"><i class="lni-wallet"></i> Silver PAY 999/-</a>
+                                                        <a class="dropdown-item" href="/Matrimonies/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=199900"><i class="lni-wallet"></i> Golden PAY 1999/-</a>
+                                                        <a class="dropdown-item" href="/Matrimonies/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=499900"><i class="lni-wallet"></i> Platinum PAY 4999/-</a>
+                                                        <a class="dropdown-item" href="/Matrimonies/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=899900"><i class="lni-wallet"></i>Diamond PAY 8999/-</a>
+
+
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        }
+
+
+
+                                    }
+                                    else if (item.VId == "4")
+                                    {
+                                        <a class="btn-action btn-view" href="/Services/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                        <a class="btn-action btn-edit" href="/Services/Edit/@item.BusinessId"><i class="lni-pencil"></i></a>
+                                        <a class="btn-action btn-delete" href="/Services/Delete/@item.BusinessId"><i class="lni-trash"></i></a>
+                                        if (item.status != "1")
+                                        {
+                                            <a class="btn-action" href="/Services/Pay?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=59900"><i><span class="adstatus adstatusactive">PAY 599</span></i></a>
+
+                                        }
+                                        else
+                                        {
+                                            <ul class="sign-in">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-notepad"></i> Upgrade</a>
+                                                    <div class="dropdown-menu">
+
+                                                        <a class="dropdown-item" href="/Services/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=99900"><i class="lni-wallet"></i> Silver PAY 999/-</a>
+                                                        <a class="dropdown-item" href="/Services/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=199900"><i class="lni-wallet"></i> Golden PAY 1999/-</a>
+                                                        <a class="dropdown-item" href="/Services/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=499900"><i class="lni-wallet"></i> Platinum PAY 4999/-</a>
+                                                        <a class="dropdown-item" href="/Services/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=899900"><i class="lni-wallet"></i>Diamond PAY 8999/-</a>
+
+
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        }
+
+                                    }
+                                    else if (item.VId == "5")
+                                    {
+                                        <a class="btn-action btn-view" href="/Jobs/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                        <a class="btn-action btn-edit" href="/Jobs/Edit/@item.BusinessId"><i class="lni-pencil"></i></a>
+                                        <a class="btn-action btn-delete" href="/Jobs/Delete/@item.BusinessId"><i class="lni-trash"></i></a>
+
+                                        if (item.status != "1")
+                                        {
+                                            <a class="btn-action" href="/Jobs/Pay?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=9900"><i><span class="adstatus adstatusactive">PAY 99</span></i></a>
+
+                                        }
+                                        else
+                                        {
+                                            <ul class="sign-in">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-notepad"></i> Upgrade</a>
+                                                    <div class="dropdown-menu">
+
+                                                        <a class="dropdown-item" href="/Jobs/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=99900"><i class="lni-wallet"></i> Silver PAY 999/-</a>
+                                                        <a class="dropdown-item" href="/Jobs/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=199900"><i class="lni-wallet"></i> Golden PAY 1999/-</a>
+                                                        <a class="dropdown-item" href="/Jobs/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=499900"><i class="lni-wallet"></i> Platinum PAY 4999/-</a>
+                                                        <a class="dropdown-item" href="/Jobs/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=899900"><i class="lni-wallet"></i>Diamond PAY 8999/-</a>
+
+
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        }
+
+                                    }
+                                    else if (item.VId == "6")
+                                    {
+                                        <a class="btn-action btn-view" href="/HotelRooms/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                        <a class="btn-action btn-edit" href="/HotelRooms/Edit/@item.BusinessId"><i class="lni-pencil"></i></a>
+                                        <a class="btn-action btn-delete" href="/HotelRooms/Delete/@item.BusinessId"><i class="lni-trash"></i></a>
+                                        if (item.status != "1")
+                                        {
+                                            <a class="btn-action" href="/HotelRooms/Pay?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=59900"><i><span class="adstatus adstatusactive">PAY 599</span></i></a>
+
+                                        }
+                                        else
+                                        {
+                                            <ul class="sign-in">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-notepad"></i> Upgrade</a>
+                                                    <div class="dropdown-menu">
+
+                                                        <a class="dropdown-item" href="/HotelRooms/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=99900"><i class="lni-wallet"></i> Silver PAY 999/-</a>
+                                                        <a class="dropdown-item" href="/HotelRooms/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=199900"><i class="lni-wallet"></i> Golden PAY 1999/-</a>
+                                                        <a class="dropdown-item" href="/HotelRooms/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=499900"><i class="lni-wallet"></i> Platinum PAY 4999/-</a>
+                                                        <a class="dropdown-item" href="/HotelRooms/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=899900"><i class="lni-wallet"></i>Diamond PAY 8999/-</a>
+
+
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        }
+
+
+
+
+                                    }
+                                    else if (item.VId == "7")
+                                    {
+                                        <a class="btn-action btn-view" href="/CabsTaxis/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                        <a class="btn-action btn-edit" href="/CabsTaxis/Edit/@item.BusinessId"><i class="lni-pencil"></i></a>
+                                        <a class="btn-action btn-delete" href="/CabsTaxis/Delete/@item.BusinessId"><i class="lni-trash"></i></a>
+
+                                        if (item.status != "1")
+                                        {
+                                            <a class="btn-action" href="/CabsTaxis/Pay?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=59900"><i><span class="adstatus adstatusactive">PAY 599</span></i></a>
+
+                                        }
+                                        else
+                                        {
+                                            <ul class="sign-in">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-notepad"></i> Upgrade</a>
+                                                    <div class="dropdown-menu">
+
+                                                        <a class="dropdown-item" href="/CabsTaxis/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=99900"><i class="lni-wallet"></i> Silver PAY 999/-</a>
+                                                        <a class="dropdown-item" href="/CabsTaxis/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=199900"><i class="lni-wallet"></i> Golden PAY 1999/-</a>
+                                                        <a class="dropdown-item" href="/CabsTaxis/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=499900"><i class="lni-wallet"></i> Platinum PAY 4999/-</a>
+                                                        <a class="dropdown-item" href="/CabsTaxis/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=899900"><i class="lni-wallet"></i>Diamond PAY 8999/-</a>
+
+
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        }
+
+
+
+                                    }
+                                    else if (item.VId == "8")
+                                    {
+                                        <a class="btn-action btn-view" href="/Auditoriums/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                        <a class="btn-action btn-edit" href="/Auditoriums/Edit/@item.BusinessId"><i class="lni-pencil"></i></a>
+                                        <a class="btn-action btn-delete" href="/Auditoriums/Delete/@item.BusinessId"><i class="lni-trash"></i></a>
+
+                                        if (item.status != "1")
+                                        {
+                                            <a class="btn-action" href="/Auditoriums/Pay?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=59900"><i><span class="adstatus adstatusactive">PAY 599</span></i></a>
+
+                                        }
+                                        else
+                                        {
+                                            <ul class="sign-in">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-notepad"></i> Upgrade</a>
+                                                    <div class="dropdown-menu">
+
+                                                        <a class="dropdown-item" href="/Auditoriums/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=99900"><i class="lni-wallet"></i> Silver PAY 999/-</a>
+                                                        <a class="dropdown-item" href="/Auditoriums/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=199900"><i class="lni-wallet"></i> Golden PAY 1999/-</a>
+                                                        <a class="dropdown-item" href="/Auditoriums/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=499900"><i class="lni-wallet"></i> Platinum PAY 4999/-</a>
+                                                        <a class="dropdown-item" href="/Auditoriums/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=899900"><i class="lni-wallet"></i>Diamond PAY 8999/-</a>
+
+
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        }
+
+                                    }
+                                    else if (item.VId == "9")
+                                    {
+                                        <a class="btn-action btn-view" href="/Educations/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                        <a class="btn-action btn-edit" href="/Educations/Edit/@item.BusinessId"><i class="lni-pencil"></i></a>
+                                        <a class="btn-action btn-delete" href="/Educations/Delete/@item.BusinessId"><i class="lni-trash"></i></a>
+
+                                        if (item.status != "1")
+                                        {
+                                            <a class="btn-action" href="/Educations/Pay?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=59900"><i><span class="adstatus adstatusactive">PAY 599</span></i></a>
+
+                                        }
+                                        else
+                                        {
+                                            <ul class="sign-in">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-notepad"></i> Upgrade</a>
+                                                    <div class="dropdown-menu">
+
+                                                        <a class="dropdown-item" href="/Educations/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=99900"><i class="lni-wallet"></i> Silver PAY 999/-</a>
+                                                        <a class="dropdown-item" href="/Educations/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=199900"><i class="lni-wallet"></i> Golden PAY 1999/-</a>
+                                                        <a class="dropdown-item" href="/Educations/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=499900"><i class="lni-wallet"></i> Platinum PAY 4999/-</a>
+                                                        <a class="dropdown-item" href="/Educations/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=899900"><i class="lni-wallet"></i>Diamond PAY 8999/-</a>
+
+
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        }
+
+
+                                    }
+                                    else if (item.VId == "10")
+                                    {
+                                        <a class="btn-action btn-view" href="/RepairMechanics/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                        <a class="btn-action btn-edit" href="/RepairMechanics/Edit/@item.BusinessId"><i class="lni-pencil"></i></a>
+                                        <a class="btn-action btn-delete" href="/RepairMechanics/Delete/@item.BusinessId"><i class="lni-trash"></i></a>
+
+                                        if (item.status != "1")
+                                        {
+                                            <a class="btn-action" href="/RepairMechanics/Pay?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=59900"><i><span class="adstatus adstatusactive">PAY 599</span></i></a>
+
+                                        }
+                                        else
+                                        {
+                                            <ul class="sign-in">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-notepad"></i> Upgrade</a>
+                                                    <div class="dropdown-menu">
+
+                                                        <a class="dropdown-item" href="/RepairMechanics/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=99900"><i class="lni-wallet"></i> Silver PAY 999/-</a>
+                                                        <a class="dropdown-item" href="/RepairMechanics/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=199900"><i class="lni-wallet"></i> Golden PAY 1999/-</a>
+                                                        <a class="dropdown-item" href="/RepairMechanics/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=499900"><i class="lni-wallet"></i> Platinum PAY 4999/-</a>
+                                                        <a class="dropdown-item" href="/RepairMechanics/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=899900"><i class="lni-wallet"></i>Diamond PAY 8999/-</a>
+
+
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        }
+
+                                    }
+                                    else if (item.VId == "11")
+                                    {
+                                        <a class="btn-action btn-view" href="/Teachers/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                        <a class="btn-action btn-edit" href="/Teachers/Edit/@item.BusinessId"><i class="lni-pencil"></i></a>
+                                        <a class="btn-action btn-delete" href="/Teachers/Delete/@item.BusinessId"><i class="lni-trash"></i></a>
+
+
+                                        if (item.status != "1")
+                                        {
+                                            <a class="btn-action" href="/Teachers/Pay?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=59900"><i><span class="adstatus adstatusactive">PAY 599</span></i></a>
+
+                                        }
+                                        else
+                                        {
+                                            <ul class="sign-in">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-notepad"></i> Upgrade</a>
+                                                    <div class="dropdown-menu">
+
+                                                        <a class="dropdown-item" href="/Teachers/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=99900"><i class="lni-wallet"></i> Silver PAY 999/-</a>
+                                                        <a class="dropdown-item" href="/Teachers/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=199900"><i class="lni-wallet"></i> Golden PAY 1999/-</a>
+                                                        <a class="dropdown-item" href="/Teachers/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=499900"><i class="lni-wallet"></i> Platinum PAY 4999/-</a>
+                                                        <a class="dropdown-item" href="/Teachers/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=899900"><i class="lni-wallet"></i>Diamond PAY 8999/-</a>
+
+
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        }
+
+
+                                    }
+                                    else if (item.VId == "12")
+                                    {
+                                        <a class="btn-action btn-view" href="/Doctors/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                        <a class="btn-action btn-edit" href="/Doctors/Edit/@item.BusinessId"><i class="lni-pencil"></i></a>
+                                        <a class="btn-action btn-delete" href="/Doctors/Delete/@item.BusinessId"><i class="lni-trash"></i></a>
+
+
+                                        if (item.status != "1")
+                                        {
+                                            <a class="btn-action" href="/Doctors/Pay?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=59900"><i><span class="adstatus adstatusactive">PAY 599</span></i></a>
+
+                                        }
+                                        else
+                                        {
+                                            <ul class="sign-in">
+                                                <li class="nav-item dropdown">
+                                                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-notepad"></i> Upgrade</a>
+                                                    <div class="dropdown-menu">
+
+                                                        <a class="dropdown-item" href="/Doctors/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=99900"><i class="lni-wallet"></i> Silver PAY 999/-</a>
+                                                        <a class="dropdown-item" href="/Doctors/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=199900"><i class="lni-wallet"></i> Golden PAY 1999/-</a>
+                                                        <a class="dropdown-item" href="/Doctors/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=499900"><i class="lni-wallet"></i> Platinum PAY 4999/-</a>
+                                                        <a class="dropdown-item" href="/Doctors/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=899900"><i class="lni-wallet"></i>Diamond PAY 8999/-</a>
+
+
+
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        }
+
+
+
+                                    }
+                                </div>
+                            </td>
+                            </tr>
+
+                        }
+
+                                    </tbody>
+                                    </table>
+
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" language="javascript" class="init">
+    $(document).ready(function () {
+        $('#myaccountlist').DataTable();
+    });
+</script>

@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+       
+        <ul class="sign-in">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-user"></i> My Account</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/MyAccount/Index"><i class="lni-home"></i> @User.Identity.GetUserName()</a>
+                    <a class="dropdown-item" href="/MyAccount/Index"><i class="lni-wallet"></i> My Ads</a>
+                    <a class="dropdown-item" href="/Account/Login"><i class="lni-lock"></i> Log In</a>
+                    <a class="dropdown-item" href="/Account/Register"><i class="lni-user"></i> Signup</a>
+                    @*<a class="dropdown-item" href="forgot-password.html"><i class="lni-reload"></i> Forgot Password</a>*@
+          
+                    <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()"><i class="lni-reload"></i>Log off</a>
+                    @*<a class="dropdown-item" href="account-close.html"><i class="lni-close"></i>Account close</a>*@
+                </div>
+            </li>
+        </ul>
+        <a class="tg-btn" href="/Home/Categories">
+            <i class="lni-pencil-alt"></i> Post An Ad
+        </a>
+    }
+}
+else
+{
+  
+
+    <ul class="sign-in">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-user"></i> My Account</a>
+            <div class="dropdown-menu">
+
+                <a class="dropdown-item" href="/Account/Login"><i class="lni-lock"></i> Log In</a>
+                <a class="dropdown-item" href="/Account/Register"><i class="lni-user"></i> Signup</a>
+
+            </div>
+        </li>
+    </ul>
+    <a class="tg-btn" href="/Home/Categories" style="
+    margin-top: -15px;
+">
+        <i class="lni-pencil-alt"></i> Post An Ad
+    </a>
+
+}

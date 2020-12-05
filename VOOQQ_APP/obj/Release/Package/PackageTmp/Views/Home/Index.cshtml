@@ -1,0 +1,258 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+
+
+@{
+    ViewBag.Title = "Categories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="categories-icon section-padding bg-drack">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3" style="width: 49%;">
+                <a href="/Forsales/Index?prime=1&&vid=1">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="lni lni-revenue"></i>
+                        </div>
+                        <h4>FOR SALE   </h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3" style="width: 49%;">
+                <a href="/Businesses/Index?prime=1&&vid=2">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="lni lni-stats-up"></i>
+                        </div>
+                        <h4>BUSINESS LIST </h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3" style="width: 49%;">
+                <a href="/Matrimonies/Index?prime=1&&vid=3">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="lni-heart"></i>
+                        </div>
+                        <h4>MATRIMONY </h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3" style="width: 49%;">
+                <a href="/Services/Index?prime=1&&vid=4">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="lni lni-handshake"></i>
+                        </div>
+                        <h4>SERVICES</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3" style="width: 49%;">
+                <a href="/Jobs/Index?prime=1&&vid=5">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="lni-briefcase"></i>
+                        </div>
+                        <h4>JOB</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3" style="width: 49%;">
+                <a href="/HotelRooms/Index?prime=1&&vid=6">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="lni lni-restaurant"></i>
+                        </div>
+                        <h4>HOTEL ROOMS </h4>
+
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3" style="width: 49%;">
+                <a href="/CabsTaxis/Index?prime=1&&vid=7">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="lni-car"></i>
+                        </div>
+                        <h4>CAB/TAXI </h4>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3" style="width: 49%;">
+                <a href="/Auditoriums/Index?prime=1&&vid=8">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="lni lni-apartment"></i>
+                        </div>
+                        <h4>AUDITORIUMS</h4>
+                    </div>
+                </a>
+            </div>
+
+
+
+
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3" style="width: 49%;">
+                <a href="/Educations/Index?prime=1&&vid=9">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="lni lni-graduation"></i>
+                        </div>
+                        <h4>EDUCATION </h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3" style="width: 49%;">
+                <a href="/RepairMechanics/Index?prime=1&&vid=10">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="lni lni-cog"></i>
+                        </div>
+                        <h4>REPAIR AND MECHANICS</h4>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3" style="width: 49%;">
+                <a href="/Teachers/Index?prime=1&&vid=11">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="lni lni-blackboard"></i>
+
+                        </div>
+                        <h4>TEACHERS  </h4>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3" style="width: 49%;">
+                <a href="/Doctors/Index?prime=1&&vid=12">
+                    <div class="icon-box">
+                        <div class="icon">
+                            <i class="lni lni-sthethoscope"></i>
+                        </div>
+                        <h4>DOCTORS</h4>
+                    </div>
+                </a>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+@*Silver: 30 Days, Payment: 999/-
+Golden: 90 Days, Payment:1999/-(2997)
+Platinum: 180 Days, Payment:4999/-(5994)
+Diamond: 360 Days, Payment: 8999/-(11988)*@
+<section id="pricing-table" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mainHeading">
+                    <h2 class="section-title">Select A Package</h2>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="table">
+                    <div class="icon">
+                        <i class="lni-gift"></i>
+                    </div>
+                    <div class="title">
+                        <h3>Silver</h3>
+                    </div>
+                    <div class="pricing-header">
+                        <p class="price-value"><sup>$</sup>999<span>/ Mo</span></p>
+                    </div>
+                    <ul class="description">
+                        <li><strong>Free</strong> ad posting</li>
+                        <li><strong>No</strong> Featured ads availability</li>
+                        <li><strong>For 30</strong> days</li>
+                        <li><strong>100%</strong> Secure!</li>
+                    </ul>
+                    <button class="btn btn-common">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="table" id="active-tb">
+                    <div class="icon">
+                        <i class="lni-leaf"></i>
+                    </div>
+                    <div class="title">
+                        <h3>Golden</h3>
+                    </div>
+                    <div class="pricing-header">
+                        <p class="price-value"><sup>$</sup>4999<span>/ Mo</span></p>
+                    </div>
+                    <ul class="description">
+                        <li><strong>Free</strong> ad posting</li>
+                        <li><strong>6</strong> Featured ads availability</li>
+                        <li><strong>For 30</strong> days</li>
+                        <li><strong>100%</strong> Secure!</li>
+                    </ul>
+                    <button class="btn btn-common">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="table">
+                    <div class="icon">
+                        <i class="lni-layers"></i>
+                    </div>
+                    <div class="title">
+                        <h3>Platinum</h3>
+                    </div>
+                    <div class="pricing-header">
+                        <p class="price-value"><sup>$</sup>8999<span>/ Mo</span></p>
+                    </div>
+                    <ul class="description">
+                        <li><strong>Free</strong> ad posting</li>
+                        <li><strong>20</strong> Featured ads availability</li>
+                        <li><strong>For 25</strong> days</li>
+                        <li><strong>100%</strong> Secure!</li>
+                    </ul>
+                    <button class="btn btn-common">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="table">
+                    <div class="icon">
+                        <i class="lni-layers"></i>
+                    </div>
+                    <div class="title">
+                        <h3>Diamond</h3>
+                    </div>
+                    <div class="pricing-header">
+                        <p class="price-value"><sup>$</sup>99<span>/ Mo</span></p>
+                    </div>
+                    <ul class="description">
+                        <li><strong>Free</strong> ad posting</li>
+                        <li><strong>20</strong> Featured ads availability</li>
+                        <li><strong>For 25</strong> days</li>
+                        <li><strong>100%</strong> Secure!</li>
+                    </ul>
+                    <button class="btn btn-common">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="subscribes section-padding">
+    <div class="container">
+        
+    </div>
+</section>
+
+
+
+

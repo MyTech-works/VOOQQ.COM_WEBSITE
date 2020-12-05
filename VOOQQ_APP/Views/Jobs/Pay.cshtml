@@ -1,0 +1,30 @@
+﻿@using VOOQQ_APP.Helper;
+@{
+    ViewBag.Title = "Pay";
+    Layout = "~/Views/Shared/_SearchLayout.cshtml";
+}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<div>
+    <form method="POST" action="https://api.razorpay.com/v1/checkout/embedded">
+        <input type="hidden" name="key_id" value="@RazorPayConst.Api_Key">
+        <input type="hidden" name="order_id" value="@ViewBag.receipt">
+        <input type="hidden" name="name" value="Vooqq.com">
+        <input type="hidden" name="description" value="Base Plan">
+        <input type="hidden" name="image" value="http://vooqq.com//Assets/assets/img/logo.png">
+        <input type="hidden" name="prefill[name]" value="Vooqq">
+        <input type="hidden" name="prefill[contact]" value="9744667975">
+        <input type="hidden" name="prefill[email]" value="Vooqq.com@gmail.com">
+        <input type="hidden" name="notes[shipping address]" value="Vooqq.com@gmail.com Trivandrum">
+       <input type="hidden" name="callback_url" value="http://vooqq.com/MyAccount/Success">
+       <input type="hidden" name="cancel_url" value="http://vooqq.com/MyAccount/Failed">
+        <button id="modal">Submit</button>
+    </form>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#modal").trigger('click');
+    });
+</script>

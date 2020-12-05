@@ -1,0 +1,42 @@
+﻿
+SELECT * FROM  Forsales 
+SELECT * FROM  Businesses
+SELECT * FROM  Matrimonies
+SELECT * FROM  CabsTaxis 
+SELECT * FROM  Auditoriums 
+SELECT * FROM  Doctors 
+SELECT * FROM  Educations 
+SELECT * FROM  HotelRooms 
+SELECT * FROM  Jobs 
+SELECT * FROM  Services 
+SELECT *FROM   Teachers
+SELECT *FROM   RepairMechanics
+
+
+
+Update     Forsales  set Status=0
+Update	   Businesses set Status=0
+Update	   Matrimonies set Status=0
+Update	   CabsTaxis  set Status=0
+Update	   Auditoriums  set Status=0
+Update	   Doctors  set Status=0
+Update	   Educations  set Status=0
+Update	   HotelRooms  set Status=0
+Update	   Jobs  set Status=0
+Update	   Services  set Status=0
+Update	   Teachers set Status=0
+Update	   RepairMechanics set Status=0
+
+
+delete from     Forsales  
+delete from	   Businesses 
+delete from	   Matrimonies 
+delete from	   CabsTaxis  
+delete from	   Auditoriums  
+delete from	   Doctors  
+delete from	   Educations  
+delete from	   HotelRooms  
+delete from	   Jobs  
+delete from	   Services  
+delete from	   Teachers 
+delete from	   RepairMechanics 

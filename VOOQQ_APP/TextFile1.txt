@@ -1,0 +1,61 @@
+﻿
+SELECT * FROM  Forsales 
+SELECT * FROM  Businesses
+SELECT * FROM  Matrimonies
+SELECT * FROM  CabsTaxis 
+SELECT * FROM  Auditoriums 
+SELECT * FROM  Doctors 
+SELECT * FROM  Educations 
+SELECT * FROM  HotelRooms 
+SELECT * FROM  Jobs 
+SELECT * FROM  Services 
+SELECT *FROM   Teachers
+SELECT *FROM   RepairMechanics
+
+
+
+Update     Forsales  set Status=0
+Update	   Businesses set Status=0
+Update	   Matrimonies set Status=0
+Update	   CabsTaxis  set Status=0
+Update	   Auditoriums  set Status=0
+Update	   Doctors  set Status=0
+Update	   Educations  set Status=0
+Update	   HotelRooms  set Status=0
+Update	   Jobs  set Status=0
+Update	   Services  set Status=0
+Update	   Teachers set Status=0
+Update	   RepairMechanics set Status=0
+
+
+delete from     Forsales  
+delete from	   Businesses 
+delete from	   Matrimonies 
+delete from	   CabsTaxis  
+delete from	   Auditoriums  
+delete from	   Doctors  
+delete from	   Educations  
+delete from	   HotelRooms  
+delete from	   Jobs  
+delete from	   Services  
+delete from	   Teachers 
+delete from	   RepairMechanics 
+
+ 
+ 
+  insert into  [vooqqirg_testvooqq1].[dbo].[PlanMasters] ([VId]
+      ,[PlanType]
+      ,[PlanName]
+      ,[PlanDays]
+      ,[NewPrice]
+      ,[OldPrice]
+      ,[Feaures1]
+      ,[Feaures2]
+      ,[Feaures3]  
+      ,[Feaures4]
+      ,[Feaures5]
+      ,[IsActive])values(12,'Standard','Statndard',1000,599,799,'Life Time  validity ','100% Secure!','Fast Reachable','','',1),
+      (12,'Prime','Silver',15,999,1500,'15 days validity ','100% Secure!','Fast Reachable','','',1),
+      (12,'Prime','Golden',30,1999,2997,'30 days validity ','100% Secure!','Fast Reachable','','',1),
+      (12,'Prime','Platinum',180,4999,5994,'180 days validity ','100% Secure!','Fast Reachable','','',1),
+      (12,'Prime','Diamond',360,8999,11988,'360 days validity ','100% Secure!','Fast Reachable','','',1)

@@ -1,0 +1,255 @@
+﻿@model IEnumerable<VOOQQ_APP.Models.Auditoriums>
+
+@{
+    /**/
+
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_SearchLayout.cshtml";
+}
+
+@foreach (var item in ViewBag.data)
+{
+
+
+    @*<div class="page-header" style="background: url(assets/img/banner1.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb-wrapper">
+                        <h2 class="product-title">Details</h2>
+                        <ol class="breadcrumb">
+                            <li><a href="#">Home /</a></li>
+                            <li class="current">Details</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+    <div class="section-padding">
+        <div class="container">
+            <div class="product-info row">
+                <div class="col-lg-7 col-md-12 col-xs-12">
+                    <div class="details-box ads-details-wrapper">
+                        <div id="owl-demo" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="product-img">
+                                    <img class="img-fluid" src="@item.Image1" alt="">
+                                </div>
+                                <span class="price">$@item.Price</span>
+                            </div>
+
+                            <div class="item">
+                                <div class="product-img">
+                                    <img class="img-fluid" src="@item.Image2" alt="">
+                                </div>
+                                <span class="price">₹ @item.Price</span>
+                            </div>
+                            <div class="item">
+                                <div class="product-img">
+                                    <img class="img-fluid" src="@item.Image3" alt="">
+                                </div>
+                                <span class="price">$@item.Price</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-12 col-xs-12">
+                    <div class="details-box">
+                        <div class="ads-details-info">
+                            <h2>@item.PropertyName</h2>
+                            <p class="mb-2"> <span><a href="#"><i class="lni-star"></i>@item.AuditoriumCategoryName</a></span></p>
+
+                            <div class="details-meta">
+                                <span><a href="#"><i class="lni-alarm-clock"></i> @item.Date</a></span>
+                                <span><a href="#"><i class="lni-map-marker"></i>@item.Location</a></span>
+                                <span><a href="#"><i class="lni-eye"></i>@item.Views View</a></span>
+                               
+                            </div>
+                            <h4 class="title-small mb-3">Auditorium Type: @item.AuditoriumTypeName</h4>
+                            <ul class="list-specification">
+                                <li><i class="lni-check-mark-circle"></i> SeatingCapacity:@item.SeatingCapacity</li>
+                                <li><i class="lni-check-mark-circle"></i> DiningCapacity: @item.DiningCapacity</li>
+                                <li><i class="lni-check-mark-circle"></i> ParkingCapacity: @item.ParkingCapacity</li>
+                                   
+                                </ul>
+                        </div>
+                        <ul class="advertisement mb-4">
+                            <li>
+                                <p><strong><i class="lni-mobile"></i> </strong> <a href="#">@item.MobileNumber</a></p>
+                            </li>
+                            <li>
+                                <p><strong><i class="lni-mobile"></i> </strong> @item.LandPhone</p>
+                            </li>
+                            <li>
+                                <p><strong><i class="lni-world"></i> W</strong> <a href="#">@item.Website</a></p>
+                            </li>
+                            <li>
+                                <p><strong><i class="lni lni-telegram-original"></i> </strong> <a href="#">@item.Email</a></p>
+                            </li>
+                        </ul>
+                        <div class="ads-btn mb-4">
+                            <a href="#" class="btn btn-common btn-reply"><i class="lni-envelope"></i>@item.Email</a>
+                            <a href="#" class="btn btn-common"><i class="lni-phone-handset"></i>@item.LandPhone</a>
+                        </div>
+                        <div class="share">
+                            @*<span>Share: </span>
+                            <div class="social-link">
+                                    <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
+                                    <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
+                                    <a class="linkedin" href="#"><i class="lni-linkedin-fill"></i></a>
+                                    <a class="google" href="#"><i class="lni-google-plus"></i></a>
+                                </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="description-info">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6 col-xs-12">
+                        <div class="description">
+                            <h4>Description</h4>
+                            <p>@item.About</p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-xs-12">
+                        <div class="short-info">
+                            <h4>Short Info</h4>
+                            <ul>
+                                <li><a href="#"><i class="lni-users"></i> More ads by <span>User</span></a></li>
+                                @*<li><a href="#"><i class="lni-printer"></i> Print this ad</a></li>
+                                    <li><a href="#"><i class="lni-reply"></i> Send to a friend</a></li>*@
+                                <li><a href="#"><i class="lni-warning"></i> Report this ad</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<section class="featured-lis section-padding">
+    <div class="container">
+        @*<h3 class="section-title">Featured Products</h3>*@
+        @*<div class="row">
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <div class="product-item">
+                        <div class="carousel-thumb">
+                            <img class="img-fluid" src="assets\img\product\img1.jpg" alt="">
+                            <div class="overlay">
+                            </div>
+                            <div class="btn-product bg-yellow">
+                                <a href="#">New</a>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="ads-details.html">Apple Macbook Pro</a></h3>
+                            <p>Lorem ipsum dolor sit</p>
+                            <span class="price">$ 89.00</span>
+                            <div class="meta">
+                                <span class="icon-wrap">
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star"></i>
+                                    <i class="lni-star"></i>
+                                </span>
+                                <span class="count-review">
+                                    <span>1</span> Reviews
+                                </span>
+                            </div>
+                            <div class="card-text">
+                                <div class="float-left">
+                                    <a href="#"><i class="lni-map-marker"></i> East 7th stree 98</a>
+                                </div>
+                                <div class="float-right">
+                                    <div class="icon">
+                                        <i class="lni-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <div class="product-item">
+                        <div class="carousel-thumb">
+                            <img class="img-fluid" src="assets\img\product\img2.jpg" alt="">
+                            <div class="overlay">
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="ads-details.html">Nikon D70 Camerar</a></h3>
+                            <p>Lorem ipsum dolor sit</p>
+                            <span class="price">$ 79.00</span>
+                            <div class="meta">
+                                <span class="icon-wrap">
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star"></i>
+                                    <i class="lni-star"></i>
+                                </span>
+                                <span class="count-review">
+                                    <span>1</span> Reviews
+                                </span>
+                            </div>
+                            <div class="card-text">
+                                <div class="float-left">
+                                    <a href="#"><i class="lni-map-marker"></i> Drive Street, US</a>
+                                </div>
+                                <div class="float-right">
+                                    <div class="icon">
+                                        <i class="lni-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <div class="product-item">
+                        <div class="carousel-thumb">
+                            <img class="img-fluid" src="assets\img\product\img3.jpg" alt="">
+                            <div class="overlay">
+                            </div>
+                            <div class="btn-product bg-red">
+                                <a href="#">Discount 50%</a>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title"><a href="ads-details.html">Iphone X</a></h3>
+                            <p>Lorem ipsum dolor sit</p>
+                            <span class="price">$ 30.00</span>
+                            <div class="meta">
+                                <span class="icon-wrap">
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star-filled"></i>
+                                    <i class="lni-star"></i>
+                                    <i class="lni-star"></i>
+                                </span>
+                                <span class="count-review">
+                                    <span>1</span> Reviews
+                                </span>
+                            </div>
+                            <div class="card-text">
+                                <div class="float-left">
+                                    <a href="#"><i class="lni-map-marker"></i> Louis, Missouri, US</a>
+                                </div>
+                                <div class="float-right">
+                                    <div class="icon">
+                                        <i class="lni-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+    </div>
+</section>
+

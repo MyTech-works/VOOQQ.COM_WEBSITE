@@ -1,0 +1,359 @@
+﻿@model VOOQQ_APP.Models.Education
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_PostLayout.cshtml";
+}
+
+
+<div class="page-header" style="background: url(assets/img/banner1.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb-wrapper">
+                    <h2 class="product-title">For Education</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="/">Home /</a>
+                        </li>
+                        <li class="current">Post you Ads</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm("Create", "Educations", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="form-horizontal">
+
+        <div id="content" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 ">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NameofInstitute, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.NameofInstitute, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.NameofInstitute, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.EducationCategoryId, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                @Html.DropDownListFor(m => m.EducationCategoryId,
+                    new SelectList(ViewBag.EducationCategory, "EducationCategoryId", "EducationCategoryName"),
+                    "Select Category",
+                    new { @class = "form-control input-height", @onchange="FillCity()" })
+
+                                @Html.ValidationMessageFor(model => model.EducationCategoryId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.EducationTypeId, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                @Html.DropDownListFor(m => m.EducationTypeId,
+                    new SelectList(ViewBag.EducationTypes, "EducationTypeId", "EducationTypeName"),
+                    "Select Type",
+                    new { @class = "form-control input-height", @onchange="FillCity()" })
+
+                                @Html.ValidationMessageFor(model => model.EducationTypeId, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Location, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                        <br /> <br />
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Image1, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                <input id="tg-photogallery1" class="btn btn-common" type="file" name="file1">
+                            </div>
+                        </div>  <br />
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Image2, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                <input id="tg-photogallery2" class="btn btn-common" type="file" name="file2">
+                            </div>
+                        </div>  <br />
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Image3, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                <input id="tg-photogallery3" class="btn btn-common" type="file" name="file3">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.LandPhone, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.LandPhone, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.LandPhone, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.MobileNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.MobileNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.MobileNumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Website, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.Website, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Website, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.About, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                @Html.EditorFor(model => model.About, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.About, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Image1, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+
+
+
+                                <div id="dvPreview1" class="tg-fileuploadlabel">  </div>
+
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Image2, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                <div id="dvPreview2" class="tg-fileuploadlabel"> </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Image3, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-12">
+                                <div id="dvPreview3" class="tg-fileuploadlabel"> </div>
+                            </div>
+                        </div>
+                        <input id="Image_one" type="hidden" name="Image1" />
+                        <input id="Image_two" type="hidden" name="Image2" />
+                        <input id="Image_three" type="hidden" name="Image3" />
+                        <input id="VId" type="hidden" name="VId" value="9" />
+                        <input id="UserId" type="hidden" name="UserId" value="@User.Identity.GetUserId()" />
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-12">
+                                <input type="submit" value="Create" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+                <script language="javascript" type="text/javascript">
+                    $(function () {
+                        $("#tg-photogallery1").change(function () {
+                            if (typeof (FileReader) != "undefined") {
+                                var dvPreview = $("#dvPreview1");
+                                dvPreview.html("");
+                                var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                                $($(this)[0].files).each(function () {
+                                    var file = $(this);
+                                    if (regex.test(file[0].name.toLowerCase())) {
+                                        var reader = new FileReader();
+                                        reader.onload = function (e) {
+                                            uploadprogressstart(file[0].name);
+                                            var img = $("<img />");
+                                            img.attr("style", "height:100px;width: 100px");
+                                            img.attr("src", e.target.result);
+                                            dvPreview.append(img);
+                                            $("#Image_one").val(file[0].name);
+                                        }
+                                        reader.readAsDataURL(file[0]);
+                                    } else {
+                                        alert(file[0].name + " is not a valid image file.");
+                                        dvPreview.html("");
+                                        return false;
+                                    }
+                                });
+                            } else {
+                                alert("This browser does not support HTML5 FileReader.");
+                            }
+                        });
+                    });
+                    $(function () {
+                        $("#tg-photogallery2").change(function () {
+                            if (typeof (FileReader) != "undefined") {
+                                var dvPreview = $("#dvPreview2");
+                                dvPreview.html("");
+                                var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                                $($(this)[0].files).each(function () {
+                                    var file = $(this);
+                                    if (regex.test(file[0].name.toLowerCase())) {
+                                        var reader = new FileReader();
+                                        reader.onload = function (e) {
+                                            uploadprogressstart(file[0].name);
+                                            var img = $("<img />");
+                                            img.attr("style", "height:100px;width: 100px");
+                                            img.attr("src", e.target.result);
+                                            dvPreview.append(img);
+                                            $("#Image_two").val(file[0].name);
+                                        }
+                                        reader.readAsDataURL(file[0]);
+                                    } else {
+                                        alert(file[0].name + " is not a valid image file.");
+                                        dvPreview.html("");
+                                        return false;
+                                    }
+                                });
+                            } else {
+                                alert("This browser does not support HTML5 FileReader.");
+                            }
+                        });
+                    });
+                    $(function () {
+                        $("#tg-photogallery3").change(function () {
+                            if (typeof (FileReader) != "undefined") {
+                                var dvPreview = $("#dvPreview3");
+                                dvPreview.html("");
+                                var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                                $($(this)[0].files).each(function () {
+                                    var file = $(this);
+                                    if (regex.test(file[0].name.toLowerCase())) {
+                                        var reader = new FileReader();
+                                        reader.onload = function (e) {
+                                            uploadprogressstart(file[0].name);
+                                            var img = $("<img />");
+                                            img.attr("style", "height:100px;width: 100px");
+                                            img.attr("src", e.target.result);
+                                            dvPreview.append(img);
+                                            $("#Image_three").val(file[0].name);
+                                        }
+                                        reader.readAsDataURL(file[0]);
+                                    } else {
+                                        alert(file[0].name + " is not a valid image file.");
+                                        dvPreview.html("");
+                                        return false;
+                                    }
+                                });
+                            } else {
+                                alert("This browser does not support HTML5 FileReader.");
+                            }
+                        });
+                    });
+                </script>
+
+
+            </div>
+        </div>
+    </div>
+}
+<div id="map"></div>
+
+
+
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 22.3038945, lng: 70.80215989999999 },
+            zoom: 13
+        });
+        var input = document.getElementById('Location');
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo('bounds', map);
+
+        var infowindow = new google.maps.InfoWindow();
+        var marker = new google.maps.Marker({
+            map: map,
+            anchorPoint: new google.maps.Point(0, -29)
+        });
+
+        autocomplete.addListener('place_changed', function () {
+            infowindow.close();
+            marker.setVisible(false);
+            var place = autocomplete.getPlace();
+
+            /* If the place has a geometry, then present it on a map. */
+            if (place.geometry.viewport) {
+                map.fitBounds(place.geometry.viewport);
+            } else {
+                map.setCenter(place.geometry.location);
+                map.setZoom(17);
+            }
+            marker.setIcon(({
+                url: place.icon,
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(35, 35)
+            }));
+            marker.setPosition(place.geometry.location);
+            marker.setVisible(true);
+
+            var address = '';
+            if (place.address_components) {
+                address = [
+                    (place.address_components[0] && place.address_components[0].short_name || ''),
+                    (place.address_components[1] && place.address_components[1].short_name || ''),
+                    (place.address_components[2] && place.address_components[2].short_name || '')
+                ].join(' ');
+            }
+
+            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+            infowindow.open(map, marker);
+
+            /* Location details */
+            document.getElementById('location-snap').innerHTML = place.formatted_address;
+            document.getElementById('lat-span').innerHTML = place.geometry.location.lat();
+            document.getElementById('lon-span').innerHTML = place.geometry.location.lng();
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhT3TomkfVQa-uIcn-JaQlPhdlXBsIvxg&libraries=places&callback=initMap" async defer></script>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

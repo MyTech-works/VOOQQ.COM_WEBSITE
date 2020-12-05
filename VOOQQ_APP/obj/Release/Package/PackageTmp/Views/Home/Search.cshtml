@@ -1,0 +1,541 @@
+﻿@model IEnumerable<VOOQQ_APP.Models.MyAccountModel>
+
+
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!--Import jQuery before export.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+<!--Data Table-->
+<script type="text/javascript" src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+@*<script type="text/javascript" src=" https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>*@
+
+<!--Export table buttons-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+
+<!--Export table button CSS-->
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+@*<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">*@
+
+<div id="content" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-12 col-xs-12 page-sidebar">
+
+                <aside>
+                    <div class="widget_search">
+                        <form role="search" id="search-form">
+                            <input type="search" class="form-control" autocomplete="off" name="s" placeholder="Search..." id="search-input" value="">
+                            <button type="submit" id="search-submit" class="search-btn"><i class="lni-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="widget categories">
+                        <h4 class="widget-title">All Categories</h4>
+                        <ul class="categories-list">
+                            <li>
+                                <a href="/Forsales/Index?prime=1&&vid=1">
+                                    <i class="lni lni-revenue"></i>
+                                    FOR SALE<span class="category-counter"></span>
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Businesses/Index?prime=1&&vid=2">
+                                    <i class="lni lni-stats-up"></i>
+                                    BUSINESS LIST  <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Matrimonies/Index?prime=1&&vid=3">
+                                    <i class="lni-heart"></i>
+                                    MATRIMONY <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Services/Index?prime=1&&vid=4">
+                                    <i class="lni lni-handshake"></i>
+                                    SERVICES <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Jobs/Index?prime=1&&vid=5">
+                                    <i class="lni-briefcase"></i>
+                                    JOB <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/HotelRooms/Index?prime=1&&vid=6">
+                                    <i class="lni lni-restaurant"></i>
+                                    HOTEL ROOMS <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/CabsTaxis/Index?prime=1&&vid=7">
+                                    <i class="lni-car"></i>
+                                    CAB/TAXI <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Auditoriums/Index?prime=1&&vid=8">
+                                    <i class="lni lni-apartment"></i>
+                                    AUDITORIUMS <span class="category-counter"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Educations/Index?prime=1&&vid=9">
+                                    <i class="lni lni-graduation"></i>
+                                    EDUCATION <span class="category-counter"></span>
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="/RepairMechanics/Index?prime=1&&vid=10">
+                                    <i class="lni lni-cog"></i>
+
+                                    REPAIR AND MECHANICS<span class="category-counter"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Teachers/Index?prime=1&&vid=11">
+                                    <i class="lni lni-blackboard"></i>
+
+                                    TEACHERS<span class="category-counter"></span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Doctors/Index?prime=1&&vid=12">
+                                    <i class="lni lni-sthethoscope"></i>
+                                    DOCTORS<span class="category-counter"></span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="widget">
+                        <h4 class="widget-title">Advertisement</h4>
+                        <div class="add-box">
+                            <img class="img-fluid" src="assets\img\img1.jpg" alt="">
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="col-lg-9 col-md-12 col-xs-12 page-content">
+                <div class="product-filter">
+                    <div class="short-name">
+                        <span>Showing results</span>
+                    </div>
+                    <div class="Show-item">
+                        <span>Show Items</span>
+                        <form class="woocommerce-ordering" method="post">
+                            <label>
+                              
+                            </label>
+                        </form>
+                    </div>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#grid-view"><i class="lni-grid"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#list-view"><i class="lni-list"></i></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="adds-wrapper">
+                    <div class="tab-content">
+
+
+                        <div id="grid-view" class="tab-pane fade">
+                            <div class="row">
+                                @foreach (var item in Model)
+                                {
+
+                                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                        <div class="featured-box">
+                                            <figure>
+                                                <div class="icon">
+                                                    <i class="lni-heart"></i>
+                                                </div>
+                                                <a href="#"><img class="img-fluid" style="width:300px;height:200px" src="@item.Image1" alt=""></a>
+                                            </figure>
+                                            <div class="feature-content">
+                                                <div class="product">
+
+                                                    @if (item.VId == "1")
+                                                    {<a href="#"><i class="lni-folder"></i> Forsales</a>
+
+                                                    }
+                                                    else if (item.VId == "2")
+                                                    {
+                                                        <a href="#"><i class="lni-folder"></i> Business</a>
+
+                                                    }
+                                                    else if (item.VId == "3")
+                                                    {
+                                                        <a href="#"><i class="lni-folder"></i> Matrimonies</a>
+
+                                                      
+                                                    }
+                                                    else if (item.VId == "4")
+                                                    {
+                                                        <a href="#"><i class="lni-folder"></i> Services</a>
+
+                                                      
+                                                    }
+                                                    else if (item.VId == "5")
+                                                    {
+                                                        <a href="#"><i class="lni-folder"></i> Jobs</a>
+
+                                                       
+                                                    }
+                                                    else if (item.VId == "6")
+                                                    {
+                                                        <a href="#"><i class="lni-folder"></i> Hotel Rooms</a>
+
+                                                     
+                                                    }
+                                                    else if (item.VId == "7")
+                                                    {
+                                                        <a href="#"><i class="lni-folder"></i> Cabs Taxis</a>
+
+                                                    }
+                                                    else if (item.VId == "8")
+                                                    {
+                                                        <a href="#"><i class="lni-folder"></i> Auditoriums</a>
+
+                                                        
+                                                    }
+                                                    else if (item.VId == "9")
+                                                    {
+                                                        <a href="#"><i class="lni-folder"></i> Educations</a>
+
+                                                      
+                                                    }
+                                                    else if (item.VId == "10")
+                                                    {
+                                                        <a href="#"><i class="lni-folder"></i> RepairMechanics</a>
+
+                                                      
+                                                    }
+                                                    else if (item.VId == "11")
+                                                    {
+                                                        <a href="#"><i class="lni-folder"></i> Teachers</a>
+
+                                                      
+                                                    }
+                                                    else if (item.VId == "12")
+                                                    {
+                                                        <a href="#"><i class="lni-folder"></i> Doctors</a>
+
+                                                     
+                                                    }
+
+
+
+                                                </div>
+                                                <h4><a href="#"> @item.Title</a></h4>
+
+                                                <ul class="address">
+                                                    <li>
+                                                        <a href="#"><i class="lni-map-marker"></i> @item.Location</a>
+                                                    </li>
+                                                    <li>
+                                                        @*<a href="#"><i class="lni-mobile"></i> @item.Mobile </a>*@
+                                                    </li>
+
+                                                </ul>
+                                                <div class="listing-bottom">
+
+                                                    <div class="btns-actions">
+                                                        @if (item.VId == "1")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Forsales/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                        }
+                                                        else if (item.VId == "2")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Businesses/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+
+                                                        }
+                                                        else if (item.VId == "3")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Matrimonies/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                        }
+                                                        else if (item.VId == "4")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Services/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+
+                                                        }
+                                                        else if (item.VId == "5")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Jobs/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                        }
+                                                        else if (item.VId == "6")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/HotelRooms/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+
+                                                        }
+                                                        else if (item.VId == "7")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/CabsTaxis/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+
+                                                        }
+                                                        else if (item.VId == "8")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Auditoriums/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                        }
+                                                        else if (item.VId == "9")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Educations/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                        }
+                                                        else if (item.VId == "10")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/RepairMechanics/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                        }
+                                                        else if (item.VId == "11")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Teachers/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+
+                                                        }
+                                                        else if (item.VId == "12")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Doctors/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+
+                                                        }
+                                                    </div>
+                                                    <a href="#" class="btn-verified float-right"><i class="lni-check-box"></i> Verified Ad</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                }
+
+                            </div>
+                        </div>
+
+                        <div id="list-view" class="tab-pane fade active show">
+                            <div class="row">
+
+
+
+                                @foreach (var item in Model)
+                                {
+
+
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="featured-box">
+                                            <figure>
+                                                <div class="icon">
+                                                    <i class="lni-heart"></i>
+                                                </div>
+                                                <a href="#"><img class="img-fluid" style="width:300px;height:200px" src="@item.Image1" alt=""></a>
+                                            </figure>
+                                            <div class="feature-content">
+                                                <div class="product">
+                                                   
+                                                        @if (item.VId == "1")
+                                                        {<a href="#"><i class="lni-folder"></i> Forsales</a>
+
+                                                        }
+                                                        else if (item.VId == "2")
+                                                        {
+                                                            <a href="#"><i class="lni-folder"></i> Business</a>
+
+                                                        }
+                                                        else if (item.VId == "3")
+                                                        {
+                                                            <a href="#"><i class="lni-folder"></i> Matrimonies</a>
+
+
+                                                        }
+                                                        else if (item.VId == "4")
+                                                        {
+                                                            <a href="#"><i class="lni-folder"></i> Services</a>
+
+
+                                                        }
+                                                        else if (item.VId == "5")
+                                                        {
+                                                            <a href="#"><i class="lni-folder"></i> Jobs</a>
+
+
+                                                        }
+                                                        else if (item.VId == "6")
+                                                        {
+                                                            <a href="#"><i class="lni-folder"></i> Hotel Rooms</a>
+
+
+                                                        }
+                                                        else if (item.VId == "7")
+                                                        {
+                                                            <a href="#"><i class="lni-folder"></i> Cabs Taxis</a>
+
+                                                        }
+                                                        else if (item.VId == "8")
+                                                        {
+                                                            <a href="#"><i class="lni-folder"></i> Auditoriums</a>
+
+
+                                                        }
+                                                        else if (item.VId == "9")
+                                                        {
+                                                            <a href="#"><i class="lni-folder"></i> Educations</a>
+
+
+                                                        }
+                                                        else if (item.VId == "10")
+                                                        {
+                                                            <a href="#"><i class="lni-folder"></i> RepairMechanics</a>
+
+
+                                                        }
+                                                        else if (item.VId == "11")
+                                                        {
+                                                            <a href="#"><i class="lni-folder"></i> Teachers</a>
+
+
+                                                        }
+                                                        else if (item.VId == "12")
+                                                        {
+                                                            <a href="#"><i class="lni-folder"></i> Doctors</a>
+
+
+                                                        }
+
+
+
+                                                
+                                                </div>
+                                                <h4><a href="#"> @item.Title</a></h4>
+
+                                                <ul class="address">
+                                                    <li>
+                                                        <a href="#"><i class="lni-map-marker"></i> @item.Location</a>
+                                                    </li>
+                                                    <li>
+                                                        @*<a href="#"><i class="lni-mobile"></i> @item.Mobile </a>*@
+                                                    </li>
+
+                                                </ul>
+                                                <div class="listing-bottom">
+                                                
+                                                    <div class="btns-actions">
+                                                        @if (item.VId == "1")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Forsales/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                                               }
+                                                        else if (item.VId == "2")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Businesses/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                       
+                                                        }
+                                                        else if (item.VId == "3")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Matrimonies/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                             }
+                                                        else if (item.VId == "4")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Services/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                     
+                                                        }
+                                                        else if (item.VId == "5")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Jobs/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                               }
+                                                        else if (item.VId == "6")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/HotelRooms/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                     
+                                                        }
+                                                        else if (item.VId == "7")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/CabsTaxis/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                      
+                                                        }
+                                                        else if (item.VId == "8")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Auditoriums/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                                  }
+                                                        else if (item.VId == "9")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Educations/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                            }
+                                                        else if (item.VId == "10")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/RepairMechanics/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                               }
+                                                        else if (item.VId == "11")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Teachers/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                  
+                                                        }
+                                                        else if (item.VId == "12")
+                                                        {
+                                                            <a class="btn-action btn-view" href="/Doctors/Details/@item.BusinessId"><i class="lni-eye"></i></a>
+                                                    
+                                                        }
+                                                    </div>
+                                                    <a href="#" class="btn-verified float-right"><i class="lni-check-box"></i> Verified Ad</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+                                }
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script type="text/javascript" language="javascript" class="init">
+    $(document).ready(function () {
+        $('#myaccountlist').DataTable();
+    });
+</script>
+
+<script type="text/javascript" language="javascript" class="init">
+    $(document).ready(function () {
+        $('#myaccountlist1').DataTable();
+    });
+</script>

@@ -1,0 +1,75 @@
+﻿@model VOOQQ_APP.Models.Plans
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Plans</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VooqCategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VooqCategoryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlanTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlanTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlanTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlanTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPrime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPrime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PlanId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,81 @@
+﻿@model VOOQQ_APP.Models.Plans
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Plans</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VooqCategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VooqCategoryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlanTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlanTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PlanTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlanTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPrime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPrime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

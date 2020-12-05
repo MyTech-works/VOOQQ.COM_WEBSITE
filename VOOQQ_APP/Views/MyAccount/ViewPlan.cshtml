@@ -1,0 +1,182 @@
+﻿@model VOOQQ_APP.Models.MyAccountModelcount
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Import jQuery before export.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+<!--Data Table-->
+<script type="text/javascript" src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+@*
+<script type="text/javascript" src=" https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>*@
+
+<!--Export table buttons-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+
+<!--Export table button CSS-->
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+
+
+
+  <section id="pricing-table" class="section-padding">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="mainHeading">
+                      <h2 class="section-title">Select A Package</h2>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xs-12">
+                  
+              </div>
+              <div class="col-lg-6 col-md-6 col-xs-12">
+                  <div class="table" id="active-tb">
+                      <div class="icon">
+                          <i class="lni-leaf"></i>
+                      </div>
+                      <div class="title">
+                          <h3>Golden</h3>
+                      </div>
+                      <div class="pricing-header">
+                          <p class="price-value"><sup>$</sup>4999<span>/ Mo</span></p>
+                      </div>
+                      <ul class="description">
+                          <li><strong>Free</strong> ad posting</li>
+                          <li><strong>6</strong> Featured ads availability</li>
+                          <li><strong>For 30</strong> days</li>
+                          <li><strong>100%</strong> Secure!</li>
+                      </ul>
+                      <button class="btn btn-common">Buy Now</button>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-xs-12">
+                  
+              </div>
+              <div class="col-lg-3 col-md-6 col-xs-12">
+                  
+              </div>
+          </div>
+      </div>
+  </section>
+
+<section id="pricing-table" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mainHeading">
+                    <h2 class="section-title">Select A Package</h2>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="table">
+                    <div class="icon">
+                        <i class="lni-gift"></i>
+                    </div>
+                    <div class="title">
+                        <h3>Silver</h3>
+                    </div>
+                    <div class="pricing-header">
+                        <p class="price-value"><sup>$</sup>999<span>/ Mo</span></p>
+                    </div>
+                    <ul class="description">
+                        <li><strong>Free</strong> ad posting</li>
+                        <li><strong>No</strong> Featured ads availability</li>
+                        <li><strong>For 30</strong> days</li>
+                        <li><strong>100%</strong> Secure!</li>
+                    </ul>
+                    <button class="btn btn-common">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="table" id="active-tb">
+                    <div class="icon">
+                        <i class="lni-leaf"></i>
+                    </div>
+                    <div class="title">
+                        <h3>Golden</h3>
+                    </div>
+                    <div class="pricing-header">
+                        <p class="price-value"><sup>$</sup>4999<span>/ Mo</span></p>
+                    </div>
+                    <ul class="description">
+                        <li><strong>Free</strong> ad posting</li>
+                        <li><strong>6</strong> Featured ads availability</li>
+                        <li><strong>For 30</strong> days</li>
+                        <li><strong>100%</strong> Secure!</li>
+                    </ul>
+                    <button class="btn btn-common">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="table">
+                    <div class="icon">
+                        <i class="lni-layers"></i>
+                    </div>
+                    <div class="title">
+                        <h3>Platinum</h3>
+                    </div>
+                    <div class="pricing-header">
+                        <p class="price-value"><sup>$</sup>8999<span>/ Mo</span></p>
+                    </div>
+                    <ul class="description">
+                        <li><strong>Free</strong> ad posting</li>
+                        <li><strong>20</strong> Featured ads availability</li>
+                        <li><strong>For 25</strong> days</li>
+                        <li><strong>100%</strong> Secure!</li>
+                    </ul>
+                    <button class="btn btn-common">Buy Now</button>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="table">
+                    <div class="icon">
+                        <i class="lni-layers"></i>
+                    </div>
+                    <div class="title">
+                        <h3>Diamond</h3>
+                    </div>
+                    <div class="pricing-header">
+                        <p class="price-value"><sup>$</sup>99<span>/ Mo</span></p>
+                    </div>
+                    <ul class="description">
+                        <li><strong>Free</strong> ad posting</li>
+                        <li><strong>20</strong> Featured ads availability</li>
+                        <li><strong>For 25</strong> days</li>
+                        <li><strong>100%</strong> Secure!</li>
+                    </ul>
+                    <button class="btn btn-common">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="subscribes section-padding">
+    <div class="container">
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+

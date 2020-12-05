@@ -1,0 +1,726 @@
+﻿
+
+@model VOOQQ_APP.Models.MyAccountModelcount
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--Import jQuery before export.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+<!--Data Table-->
+<script type="text/javascript" src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+@*<script type="text/javascript" src=" https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>*@
+
+<!--Export table buttons-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/pdfmake.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.print.min.js"></script>
+
+<!--Export table button CSS-->
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+@*<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">*@
+
+<div id="content" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-3 page-sidebar">
+                <aside>
+                    <div class="sidebar-box">
+                        <div class="user">
+                            <figure>
+                                <a href="#"><img src="\Assets\assets\img\author\img1.jpg" alt=""></a>
+                            </figure>
+                            <div class="usercontent">
+                                @if (User.Identity.GetUserName() != null)
+                                {
+                                    var id = User.Identity.GetUserName();
+
+                                    if (id == "info@vooqq.com")
+                                    {
+                                        <h4>Administrator</h4>
+                                        <p>Hi ! @User.Identity.GetUserName()</p>
+
+                                    }
+                                    else
+                                    {
+
+                                        <h3>User</h3>
+                                        <p>Hi !  @User.Identity.GetUserName()</p>
+                                    }
+
+                                }
+
+                                else
+                                {
+
+                                }
+
+
+                            </div>
+                        </div>
+
+                        <nav class="navdashboard">
+
+                            @if (User.Identity.GetUserName() != null)
+                            {
+                                var id = User.Identity.GetUserName();
+
+                                if (id == "info@vooqq.com")
+                                {
+                                    <ul>
+                                        <li>
+                                            <a class="active" href="/MyAccount/Dashboard">
+                                                <i class="lni-dashboard"></i>
+                                                <span>Dashboard</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/MyAccount/Index">
+                                                <i class="lni-layers"></i>
+                                                <span>All Adds</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/MyAccount/AddsManage">
+                                                <i class="lni-envelope"></i>
+                                                <span>Manage Adds</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/MyAccount/views">
+                                                <i class="lni-eye"></i>
+                                                <span>Views</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/MyAccount/Payments">
+                                                <i class="lni-wallet"></i>
+                                                <span>Payments</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/MyAccount/UsersList">
+                                                <i class="lni-heart"></i>
+                                                <span>All Users</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="lni-star"></i>
+                                                <span>Privacy Settings</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="lni-cog"></i>
+                                                <span>Profile Settings</span>
+                                            </a>
+                                        </li>
+                                        <li>
+
+                                            <a href="javascript:document.getElementById('logoutForm').submit()">
+                                                <i class="lni-enter"></i>
+
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                }
+                                else
+                                {
+
+                                    <ul>
+                                        <li>
+                                            <a href="dashboard.html">
+                                                <i class="#"></i>
+                                                <span>Dashboard</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="active" href="/MyAccount/Index">
+                                                <i class="lni-layers"></i>
+                                                <span>My Ads</span>
+                                            </a>
+                                        </li>
+
+
+                                        <li>
+                                            <a href="#">
+                                                <i class="lni-star"></i>
+                                                <span>Privacy Settings</span>
+                                            </a>
+                                        <li>
+                                            <a href="#">
+                                                <i class="lni-cog"></i>
+                                                <span>Profile Settings</span>
+                                            </a>
+                                        </li>
+                                        </li>
+                                        <li>
+
+                                            <a href="javascript:document.getElementById('logoutForm').submit()">
+                                                <i class="lni-enter"></i>
+
+                                                <span>Logout</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                }
+
+                            }
+
+                            else
+                            {
+
+                            }
+
+                        </nav>
+                    </div>
+                    <div class="widget">
+                        <h4 class="widget-title">Advertisement</h4>
+                        <div class="add-box">
+                            <img class="img-fluid" src="assets\img\img1.jpg" alt="">
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-9">
+
+                <div class="page-content">
+                    <div class="inner-box">
+                        <div class="dashboard-box">
+                            <h2 class="dashbord-title"> Manage Adds  </h2>
+                        </div>
+                        <div class="dashboard-wrapper">
+
+                            <br />
+                            <br />
+
+                            <table id="myaccountlist" class="table table-responsive dashboardtable tablemyads">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            Image
+                                        </th>
+                                        <th>
+                                          Category
+                                        </th>
+
+                                        <th>
+                                            Title
+                                        </th>
+
+                                        <th>
+                                            Status
+                                        </th>
+                                        <th>
+                                            Views
+                                        </th>
+                                        <th>
+                                            Location
+                                        </th>
+                                        <th>
+                                            Action
+
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    @foreach (var item in ViewBag.data)
+                                    {
+                                    <tr data-category="active">
+
+                                        <td class="photo"><img class="img-fluid" src="@item.Image1" alt=""></td>
+                                        <td data-title="Title">
+
+
+
+                                            @if (item.VId == "1")
+                                            {
+                                                <a href="/Forsales/Index?prime=1&&vid=1">
+                                                    <div class="icon-box">
+                                                        <div class="icon">
+                                                            <i class="lni lni-revenue"></i>
+                                                        </div>
+                                                        <h6>FOR SALE   </h6>
+                                                    </div>
+                                                </a>
+                                            }
+                                            else if (item.VId == "2")
+                                            {
+                                                <a href="/Businesses/Index?prime=1&&vid=2">
+                                                    <div class="icon-box">
+                                                        <div class="icon">
+                                                            <i class="lni lni-stats-up"></i>
+                                                        </div>
+                                                        <h6>BUSINESS LIST </h6>
+                                                    </div>
+                                                </a>
+                                            }
+                                            else if (item.VId == "3")
+                                            {
+                                                <a href="/Matrimonies/Index?prime=1&&vid=3">
+                                                    <div class="icon-box">
+                                                        <div class="icon">
+                                                            <i class="lni-heart"></i>
+                                                        </div>
+                                                        <h6>MATRIMONY </h6>
+                                                    </div>
+                                                </a>
+                                            }
+                                            else if (item.VId == "4")
+                                            { <a href="/Services/Index?prime=1&&vid=4">
+                                                    <div class="icon-box">
+                                                        <div class="icon">
+                                                            <i class="lni lni-handshake"></i>
+                                                        </div>
+                                                        <h6>SERVICES</h6>
+                                                    </div>
+                                                </a>
+                                            }
+                                            else if (item.VId == "5")
+                                            {
+                                                <a href="/Jobs/Index?prime=1&&vid=5">
+                                                    <div class="icon-box">
+                                                        <div class="icon">
+                                                            <i class="lni-briefcase"></i>
+                                                        </div>
+                                                        <h6>JOB</h6>
+                                                    </div>
+                                                </a>
+                                            }
+                                            else if (item.VId == "6")
+                                            {
+                                                <a href="/HotelRooms/Index?prime=1&&vid=6">
+                                                    <div class="icon-box">
+                                                        <div class="icon">
+                                                            <i class="lni lni-restaurant"></i>
+                                                        </div>
+                                                        <h6>HOTEL ROOMS </h6>
+
+                                                    </div>
+                                                </a>
+                                            }
+                                            else if (item.VId == "7")
+                                            {
+                                                <a href="/CabsTaxis/Index?prime=1&&vid=7">
+                                                    <div class="icon-box">
+                                                        <div class="icon">
+                                                            <i class="lni-car"></i>
+                                                        </div>
+                                                        <h6>CAB/TAXI </h6>
+                                                    </div>
+                                                </a>
+                                            }
+                                            else if (item.VId == "8")
+                                            {
+                                                <a href="/Auditoriums/Index?prime=1&&vid=8">
+                                                    <div class="icon-box">
+                                                        <div class="icon">
+                                                            <i class="lni lni-apartment"></i>
+                                                        </div>
+                                                        <h6>AUDITORIUMS</h6>
+                                                    </div>
+                                                </a>
+                                            }
+                                            else if (item.VId == "9")
+                                            {
+                                                <a href="/Educations/Index?prime=1&&vid=9">
+                                                    <div class="icon-box">
+                                                        <div class="icon">
+                                                            <i class="lni lni-graduation"></i>
+                                                        </div>
+                                                        <h6>EDUCATION </h6>
+                                                    </div>
+                                                </a>
+                                            }
+                                            else if (item.VId == "10")
+                                            {
+                                                <a href="/RepairMechanics/Index?prime=1&&vid=10">
+                                                    <div class="icon-box">
+                                                        <div class="icon">
+                                                            <i class="lni lni-cog"></i>
+                                                        </div>
+                                                        <h6>REPAIR AND MECHANICS</h6>
+                                                    </div>
+                                                </a>
+                                            }
+                                            else if (item.VId == "11")
+                                            {
+                                                <a href="/Teachers/Index?prime=1&&vid=11">
+                                                    <div class="icon-box">
+                                                        <div class="icon">
+                                                            <i class="lni lni-blackboard"></i>
+
+                                                        </div>
+                                                        <h6>TEACHERS  </h6>
+                                                    </div>
+                                                </a>
+                                            }
+                                            else if (item.VId == "12")
+                                            {
+                                                <a href="/Doctors/Index?prime=1&&vid=12">
+                                                    <div class="icon-box">
+                                                        <div class="icon">
+                                                            <i class="lni lni-sthethoscope"></i>
+                                                        </div>
+                                                        <h6>DOCTORS</h6>
+                                                    </div>
+                                                </a>
+                                            }
+
+                                        </td>
+
+                                        <td data-title="Title">
+                                            <h3>  @item.Title</h3>
+
+                                        </td>
+                                        <td data-title="Ad Status">
+                                            @if (item.status == "0")
+                                            {
+                                                <span class="adstatus adstatusexpired">Expired</span>
+
+                                            }
+                                            else
+                                            {
+                                                <span class="adstatus adstatusactive">active</span>
+                                            }
+
+                                        </td>
+                                        <td data-title="Ad Status">
+
+                                            <span class="adstatus adstatussold">@item.views</span>
+
+
+
+                                        </td>
+                                        <td data-title="Title">
+                                            <h3>@item.Location</h3>
+
+                                        </td>
+
+                                        <td data-title="Action">
+                                            <div class="btns-actions">
+                                                @if (item.VId == "1")
+                                                {
+                                                    if (item.status == "0")
+                                                    {
+                                                        <span class="adstatus adstatusexpired">Expired</span>
+                                                        <a href="/Forsales/UpdateStatusTrue/@item.BusinessId"> Set Active</a>
+
+                                                    }
+
+
+                                                    else if (item.status == "1")
+                                                    {
+                                                        <span class="adstatus adstatusactive">active</span>
+                                                        <a href="/Forsales/UpdateStatusFalse/@item.BusinessId"> Set Expired</a>
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+                                                }
+                                                else if (item.VId == "2")
+                                                {
+                                                    if (item.status == "0")
+                                                    {
+                                                        <span class="adstatus adstatusexpired">Expired</span>
+                                                        <a href="/Businesses/UpdateStatusTrue/@item.BusinessId"> Set Active</a>
+
+                                                    }
+
+
+                                                    else if (item.status == "1")
+                                                    {
+                                                        <span class="adstatus adstatusactive">active</span>
+                                                        <a href="/Businesses/UpdateStatusFalse/@item.BusinessId"> Set Expired</a>
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+
+
+
+
+                                                }
+                                                else if (item.VId == "3")
+                                                {
+                                                    if (item.status == "0")
+                                                    {
+                                                        <span class="adstatus adstatusexpired">Expired</span>
+                                                        <a href="/Matrimonies/UpdateStatusTrue/@item.BusinessId"> Set Active</a>
+
+                                                    }
+
+
+                                                    else if (item.status == "1")
+                                                    {
+                                                        <span class="adstatus adstatusactive">active</span>
+                                                        <a href="/Matrimonies/UpdateStatusFalse/@item.BusinessId"> Set Expired</a>
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+
+
+
+                                                }
+                                                else if (item.VId == "4")
+                                                {
+                                                    if (item.status == "0")
+                                                    {
+                                                        <span class="adstatus adstatusexpired">Expired</span>
+                                                        <a href="/Services/UpdateStatusTrue/@item.BusinessId"> Set Active</a>
+
+                                                    }
+
+
+                                                    else if (item.status == "1")
+                                                    {
+                                                        <span class="adstatus adstatusactive">active</span>
+                                                        <a href="/Services/UpdateStatusFalse/@item.BusinessId"> Set Expired</a>
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+
+
+                                                }
+                                                else if (item.VId == "5")
+                                                {
+                                                    if (item.status == "0")
+                                                    {
+                                                        <span class="adstatus adstatusexpired">Expired</span>
+                                                        <a href="/Jobs/UpdateStatusTrue/@item.BusinessId"> Set Active</a>
+
+                                                    }
+
+
+                                                    else if (item.status == "1")
+                                                    {
+                                                        <span class="adstatus adstatusactive">active</span>
+                                                        <a href="/Jobs/UpdateStatusFalse/@item.BusinessId"> Set Expired</a>
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+
+
+                                                }
+                                                else if (item.VId == "6")
+                                                {
+                                                    if (item.status == "0")
+                                                    {
+                                                        <span class="adstatus adstatusexpired">Expired</span>
+                                                        <a href="/HotelRooms/UpdateStatusTrue/@item.BusinessId"> Set Active</a>
+
+                                                    }
+
+
+                                                    else if (item.status == "1")
+                                                    {
+                                                        <span class="adstatus adstatusactive">active</span>
+                                                        <a href="/HotelRooms/UpdateStatusFalse/@item.BusinessId"> Set Expired</a>
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+
+
+                                                }
+                                                else if (item.VId == "7")
+                                                {
+                                                    if (item.status == "0")
+                                                    {
+                                                        <span class="adstatus adstatusexpired">Expired</span>
+                                                        <a href="/CabsTaxis/UpdateStatusTrue/@item.BusinessId"> Set Active</a>
+
+                                                    }
+
+
+                                                    else if (item.status == "1")
+                                                    {
+                                                        <span class="adstatus adstatusactive">active</span>
+                                                        <a href="/CabsTaxis/UpdateStatusFalse/@item.BusinessId"> Set Expired</a>
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+
+
+                                                }
+                                                else if (item.VId == "8")
+                                                {
+                                                    if (item.status == "0")
+                                                    {
+                                                        <span class="adstatus adstatusexpired">Expired</span>
+                                                        <a href="/Auditoriums/UpdateStatusTrue/@item.BusinessId"> Set Active</a>
+
+                                                    }
+
+
+                                                    else if (item.status == "1")
+                                                    {
+                                                        <span class="adstatus adstatusactive">active</span>
+                                                        <a href="/Auditoriums/UpdateStatusFalse/@item.BusinessId"> Set Expired</a>
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+
+                                                }
+                                                else if (item.VId == "9")
+                                                {
+                                                    if (item.status == "0")
+                                                    {
+                                                        <span class="adstatus adstatusexpired">Expired</span>
+                                                        <a href="/Educations/UpdateStatusTrue/@item.BusinessId"> Set Active</a>
+
+                                                    }
+
+
+                                                    else if (item.status == "1")
+                                                    {
+                                                        <span class="adstatus adstatusactive">active</span>
+                                                        <a href="/Educations/UpdateStatusFalse/@item.BusinessId"> Set Expired</a>
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+
+
+                                                }
+                                                else if (item.VId == "10")
+                                                {
+                                                    if (item.status == "0")
+                                                    {
+                                                        <span class="adstatus adstatusexpired">Expired</span>
+                                                        <a href="/RepairMechanics/UpdateStatusTrue/@item.BusinessId"> Set Active</a>
+
+                                                    }
+
+
+                                                    else if (item.status == "1")
+                                                    {
+                                                        <span class="adstatus adstatusactive">active</span>
+                                                        <a href="/RepairMechanics/UpdateStatusFalse/@item.BusinessId"> Set Expired</a>
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+
+                                                }
+                                                else if (item.VId == "11")
+                                                {
+                                                    if (item.status == "0")
+                                                    {
+                                                        <span class="adstatus adstatusexpired">Expired</span>
+                                                        <a href="/Teachers/UpdateStatusTrue/@item.BusinessId"> Set Active</a>
+
+                                                    }
+
+
+                                                    else if (item.status == "1")
+                                                    {
+                                                        <span class="adstatus adstatusactive">active</span>
+                                                        <a href="/Teachers/UpdateStatusFalse/@item.BusinessId"> Set Expired</a>
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+
+
+                                                }
+                                                else if (item.VId == "12")
+                                                {
+                                                    if (item.status == "0")
+                                                    {
+                                                        <span class="adstatus adstatusexpired">Expired</span>
+                                                        <a href="/Doctors/UpdateStatusTrue/@item.BusinessId"> Set Active</a>
+
+                                                    }
+
+
+                                                    else if (item.status == "1")
+                                                    {
+                                                        <span class="adstatus adstatusactive">active</span>
+                                                        <a href="/Doctors/UpdateStatusFalse/@item.BusinessId"> Set Expired</a>
+
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+
+                                                }
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    }
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-9">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" language="javascript" class="init">
+    $(document).ready(function () {
+        $('#myaccountlist').DataTable();
+    });
+</script>
+
+
+
+
+
+
+
+
+
