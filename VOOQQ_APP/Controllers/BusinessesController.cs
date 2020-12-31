@@ -262,7 +262,7 @@ namespace VOOQQ_APP.Controllers
 
                 db.Business.Add(business);
                 db.SaveChanges();
-                return RedirectToAction("Index", "MyAccount");
+                return RedirectToAction("ViewPlan", "MyAccount", new { prime = 0, vid = business.VId, id = business.BusinessId });
             }
 
             return View(business);

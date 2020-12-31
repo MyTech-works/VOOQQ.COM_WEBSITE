@@ -244,7 +244,7 @@ namespace VOOQQ_APP.Controllers
                 auditoriums.EndDate = DateTime.Now;
                 db.Auditoriums.Add(auditoriums);
                 db.SaveChanges();
-                return RedirectToAction("Index", "MyAccount");
+                return RedirectToAction("ViewPlan", "MyAccount", new { prime = 0, vid = auditoriums.VId, id = auditoriums.AuditoriumId });
             }
 
             return View(auditoriums);

@@ -11,463 +11,463 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="Assets/404.html">
-      <publishTime>12/21/2019 12:32:12</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/about.html">
-      <publishTime>12/21/2019 12:32:12</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/account-archived-ads.html">
-      <publishTime>12/21/2019 12:32:12</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/account-close.html">
-      <publishTime>12/21/2019 12:32:12</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/account-favourite-ads.html">
-      <publishTime>12/21/2019 12:32:12</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/account-myads.html">
-      <publishTime>12/21/2019 12:32:12</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/account-profile-setting.html">
-      <publishTime>12/21/2019 12:32:12</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/adlistinggrid.html">
-      <publishTime>12/21/2019 12:32:12</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/adlistinglist.html">
-      <publishTime>07/11/2020 18:07:10</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/ads-details.html">
-      <publishTime>06/14/2020 08:38:24</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/animate.css">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/bootstrap.min.css">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/color-switcher.css">
-      <publishTime>12/21/2019 12:32:12</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/font/line-icons.css">
-      <publishTime>05/31/2020 18:19:02</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/font/LineIcons.bin">
-      <publishTime>12/21/2019 12:32:16</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/font/LineIcons.eot">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/font/LineIcons.svg">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/font/LineIcons.woff">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/font/summernote-1.eot">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/font/summernote.bin">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/font/summernote.eot">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/font/summernote.woff">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/main.css">
-      <publishTime>08/21/2020 22:57:34</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/nivo-lightbox.css">
-      <publishTime>12/21/2019 12:32:12</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/owl.carousel.css">
-      <publishTime>06/14/2020 11:49:02</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/responsive.css">
-      <publishTime>12/21/2019 12:32:12</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/slicknav.css">
-      <publishTime>12/21/2019 12:32:12</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/css/summernote.css">
-      <publishTime>12/21/2019 12:32:12</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/fonts/line-icons.css">
-      <publishTime>05/31/2020 18:20:08</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/fonts/LineIcons.bin">
-      <publishTime>12/21/2019 12:32:16</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/fonts/LineIcons.eot">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/fonts/LineIcons.svg">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/fonts/LineIcons.woff">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/about/about.png">
-      <publishTime>12/21/2019 12:32:16</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/art/img1.jpg">
-      <publishTime>12/21/2019 12:32:16</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/art/img2.jpg">
-      <publishTime>12/21/2019 12:32:16</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/author/img1.jpg">
-      <publishTime>09/19/2020 20:59:07</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/background/counter-back1.jpg">
-      <publishTime>12/21/2019 12:32:18</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/banner1.jpg">
-      <publishTime>12/21/2019 12:32:16</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/blog1.jpg">
-      <publishTime>12/21/2019 12:32:20</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/blog2.jpg">
-      <publishTime>12/21/2019 12:32:20</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/blog3.jpg">
-      <publishTime>12/21/2019 12:32:20</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/img1.jpg">
-      <publishTime>12/21/2019 12:32:20</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/img2.jpg">
-      <publishTime>12/21/2019 12:32:20</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/img3.jpg">
-      <publishTime>12/21/2019 12:32:18</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/thumb1.jpg">
-      <publishTime>12/21/2019 12:32:18</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/thumb2.jpg">
-      <publishTime>12/21/2019 12:32:18</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/thumb3.jpg">
-      <publishTime>12/21/2019 12:32:18</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/thumb4.jpg">
-      <publishTime>12/21/2019 12:32:18</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/thumb5.jpg">
-      <publishTime>12/21/2019 12:32:18</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/user1.jpg">
-      <publishTime>12/21/2019 12:32:18</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/user2.jpg">
-      <publishTime>12/21/2019 12:32:18</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/blog/user3.jpg">
-      <publishTime>12/21/2019 12:32:18</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/category/img-01.jpg">
-      <publishTime>12/21/2019 12:32:20</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/category/img-02.jpg">
-      <publishTime>12/21/2019 12:32:20</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/category/img-03.jpg">
-      <publishTime>12/21/2019 12:32:20</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/category/img-04.jpg">
-      <publishTime>12/21/2019 12:32:20</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/category/img-05.jpg">
-      <publishTime>12/21/2019 12:32:20</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/cities/img1.jpg">
-      <publishTime>12/21/2019 12:32:22</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/cities/img2.jpg">
-      <publishTime>12/21/2019 12:32:22</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/cities/img3.jpg">
-      <publishTime>12/21/2019 12:32:22</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/cities/img4.jpg">
-      <publishTime>12/21/2019 12:32:22</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/cities/img5.jpg">
-      <publishTime>12/21/2019 12:32:22</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/ctl-img.jpg">
-      <publishTime>12/21/2019 12:32:16</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/featured/img1.jpg">
-      <publishTime>12/21/2019 12:32:22</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/featured/img2.jpg">
-      <publishTime>12/21/2019 12:32:22</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/featured/img3.jpg">
-      <publishTime>12/21/2019 12:32:22</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/featured/img4.jpg">
-      <publishTime>12/21/2019 12:32:22</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/featured/img5.jpg">
-      <publishTime>12/21/2019 12:32:22</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/featured/img6.jpg">
-      <publishTime>12/21/2019 12:32:22</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/footer/card1.jpg">
-      <publishTime>12/21/2019 12:32:24</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/footer/card2.jpg">
-      <publishTime>12/21/2019 12:32:24</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/footer/card3.jpg">
-      <publishTime>12/21/2019 12:32:22</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/footer/card4.jpg">
-      <publishTime>12/21/2019 12:32:22</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/hero-area.jpg">
-      <publishTime>12/21/2019 12:32:16</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/img1.jpg">
-      <publishTime>12/21/2019 12:32:16</publishTime>
+      <publishTime>12/22/2020 22:33:25</publishTime>
     </File>
     <File Include="Assets/assets/img/logo.png">
-      <publishTime>12/25/2019 18:02:32</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/product/img1.jpg">
-      <publishTime>12/21/2019 12:32:24</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/product/img10.jpg">
-      <publishTime>12/21/2019 12:32:24</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/product/img2.jpg">
-      <publishTime>12/21/2019 12:32:24</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/product/img3.jpg">
-      <publishTime>12/21/2019 12:32:24</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/product/img4.jpg">
-      <publishTime>12/21/2019 12:32:24</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/product/img5.jpg">
-      <publishTime>12/21/2019 12:32:24</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/product/img6.jpg">
-      <publishTime>12/21/2019 12:32:24</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/product/img7.jpg">
-      <publishTime>12/21/2019 12:32:24</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/product/img8.jpg">
-      <publishTime>12/21/2019 12:32:24</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/product/img9.jpg">
-      <publishTime>12/21/2019 12:32:24</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/productinfo/img1.jpg">
-      <publishTime>12/21/2019 12:32:26</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/productinfo/img2.jpg">
-      <publishTime>12/21/2019 12:32:26</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/productinfo/img3.jpg">
-      <publishTime>12/21/2019 12:32:26</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/testimonial/img1.png">
-      <publishTime>12/21/2019 12:32:26</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/testimonial/img2.png">
-      <publishTime>12/21/2019 12:32:26</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/img/testimonial/img3.png">
-      <publishTime>12/21/2019 12:32:26</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/bootstrap.min.js">
-      <publishTime>12/21/2019 12:32:28</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/color-switcher.js">
-      <publishTime>05/31/2020 18:02:38</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/contact-form-script.min.js">
-      <publishTime>12/21/2019 12:32:28</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/form-validator.min.js">
-      <publishTime>12/21/2019 12:32:28</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/jquery-min.js">
-      <publishTime>12/21/2019 12:32:28</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/jquery.counterup.min.js">
-      <publishTime>12/21/2019 12:32:28</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/jquery.slicknav.js">
-      <publishTime>12/21/2019 12:32:28</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/main.js">
-      <publishTime>08/21/2020 22:57:34</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/map.js">
-      <publishTime>12/21/2019 12:32:28</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/nivo-lightbox.js">
-      <publishTime>12/21/2019 12:32:26</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/owl.carousel.min.js">
-      <publishTime>12/21/2019 12:32:26</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/popper.min.js">
-      <publishTime>12/21/2019 12:32:26</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/summernote.js">
-      <publishTime>11/29/2020 22:03:43</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/waypoints.min.js">
-      <publishTime>12/21/2019 12:32:26</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/assets/js/wow.js">
-      <publishTime>12/21/2019 12:32:26</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/blog-grid-full-width.html">
-      <publishTime>12/21/2019 12:32:10</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/blog-left-sidebar.html">
-      <publishTime>12/21/2019 12:32:10</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/blog.html">
-      <publishTime>12/21/2019 12:32:10</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/category.html">
-      <publishTime>12/21/2019 12:32:10</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/contact.html">
-      <publishTime>12/21/2019 12:32:10</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/dashboard.html">
-      <publishTime>12/21/2019 12:32:10</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/faq.html">
-      <publishTime>12/21/2019 12:32:10</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/index-2.html">
-      <publishTime>12/21/2019 12:32:10</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/index-3.html">
-      <publishTime>12/21/2019 12:32:10</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/index.html">
-      <publishTime>01/26/2020 19:07:06</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/login.html">
-      <publishTime>01/26/2020 19:07:14</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/offermessages.html">
-      <publishTime>12/21/2019 12:32:08</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/payments.html">
-      <publishTime>12/21/2019 12:32:08</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/post-ads.html">
-      <publishTime>01/28/2020 07:09:32</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/pricing.html">
-      <publishTime>12/21/2019 12:32:08</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/privacy-setting.html">
-      <publishTime>12/21/2019 12:32:08</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/services.html">
-      <publishTime>12/21/2019 12:32:08</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/signup.html">
-      <publishTime>12/21/2019 12:32:08</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/single-post.html">
-      <publishTime>12/21/2019 12:32:08</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/testimonial.html">
-      <publishTime>12/21/2019 12:32:08</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Assets/Web.config">
-      <publishTime>12/23/2019 13:03:38</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
-      <publishTime>09/10/2013 16:29:20</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="bin/Antlr3.Runtime.pdb">
-      <publishTime>09/10/2013 16:29:20</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>10/23/2017 13:15:18</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>10/23/2017 13:15:20</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
-      <publishTime>04/24/2018 12:47:38</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
-      <publishTime>04/24/2018 12:47:40</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
-      <publishTime>04/24/2018 12:47:40</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.TelemetryCorrelation.dll">
-      <publishTime>06/28/2017 15:05:26</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/24/2018 13:38:22</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.dll">
-      <publishTime>02/13/2018 16:28:04</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
-      <publishTime>02/13/2018 16:28:12</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
-      <publishTime>02/13/2018 16:28:20</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.dll">
-      <publishTime>02/13/2018 16:28:16</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
-      <publishTime>02/13/2018 16:28:22</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Google.dll">
-      <publishTime>02/13/2018 16:28:22</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
-      <publishTime>02/13/2018 16:28:26</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
-      <publishTime>02/13/2018 16:28:28</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
-      <publishTime>02/13/2018 16:28:30</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>07/25/2012 11:48:56</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>03/24/2018 17:44:14</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Owin.dll">
-      <publishTime>11/13/2012 12:19:34</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/PagedList.dll">
-      <publishTime>09/30/2013 17:36:38</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/PagedList.Mvc.dll">
-      <publishTime>09/30/2013 18:15:20</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/Razorpay.dll">
-      <publishTime>11/09/2018 11:43:46</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>05/24/2018 13:38:22</publishTime>
@@ -608,415 +608,451 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/24/2018 13:38:24</publishTime>
     </File>
     <File Include="bin/System.Diagnostics.DiagnosticSource.dll">
-      <publishTime>07/19/2017 10:01:30</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>02/01/2018 12:20:56</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>02/01/2018 12:16:32</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>02/11/2014 15:26:04</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>02/01/2018 12:16:56</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Deployment.dll">
-      <publishTime>02/01/2018 12:20:56</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.dll">
-      <publishTime>02/01/2018 12:20:56</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/System.Web.WebPages.Razor.dll">
-      <publishTime>02/01/2018 12:20:56</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="bin/VOOQQ_APP.dll">
-      <publishTime>12/02/2020 08:48:20</publishTime>
+      <publishTime>12/22/2020 23:10:26</publishTime>
     </File>
     <File Include="bin/VOOQQ_APP.pdb">
-      <publishTime>12/02/2020 08:48:20</publishTime>
+      <publishTime>12/22/2020 23:10:26</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>01/23/2014 13:57:34</publishTime>
+      <publishTime>12/06/2020 19:38:42</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css.map">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.min.css">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.min.css.map">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Content/bootstrap.css.map">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css.map">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Content/PagedList.css">
-      <publishTime>02/12/2020 11:50:52</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>01/26/2020 08:06:16</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="favicon.ico">
-      <publishTime>01/26/2020 08:06:16</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff2">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="fonts/LineIcons.bin">
-      <publishTime>12/21/2019 12:32:16</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="fonts/LineIcons.eot">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="fonts/LineIcons.svg">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="fonts/LineIcons.woff">
-      <publishTime>12/21/2019 12:32:14</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Global.asax">
-      <publishTime>01/26/2020 08:06:16</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Images/3.PNG">
-      <publishTime>10/05/2019 12:57:16</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Images/4.PNG">
-      <publishTime>10/05/2019 13:09:48</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Images/8.jpg">
-      <publishTime>07/21/2020 13:48:46</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Images/asas.PNG">
-      <publishTime>10/05/2019 13:18:34</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Images/d.PNG">
-      <publishTime>10/05/2019 13:09:02</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Images/logo.png">
-      <publishTime>12/25/2019 18:02:32</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Images/notdatafound.png">
-      <publishTime>10/05/2019 13:38:16</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Images/nullimage.jpg">
-      <publishTime>02/02/2020 22:13:28</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="Images/rerer.PNG">
-      <publishTime>10/05/2019 13:09:18</publishTime>
+      <publishTime>12/06/2020 19:38:40</publishTime>
+    </File>
+    <File Include="MailTemplates/AppointmentCancel.config">
+      <publishTime>12/06/2020 19:38:40</publishTime>
+    </File>
+    <File Include="MailTemplates/DoctorSignup.config">
+      <publishTime>12/22/2020 22:17:54</publishTime>
+    </File>
+    <File Include="MailTemplates/HospitalSignUp.config">
+      <publishTime>12/06/2020 19:38:40</publishTime>
+    </File>
+    <File Include="MailTemplates/PatientSignUp.config">
+      <publishTime>12/06/2020 19:38:40</publishTime>
+    </File>
+    <File Include="MailTemplates/ReferDoctor.config">
+      <publishTime>12/06/2020 19:38:40</publishTime>
+    </File>
+    <File Include="MailTemplates/ReferPatient.config">
+      <publishTime>12/06/2020 19:38:40</publishTime>
+    </File>
+    <File Include="MailTemplates/StartSession.config">
+      <publishTime>12/06/2020 19:38:40</publishTime>
+    </File>
+    <File Include="MailTemplates/veri.config">
+      <publishTime>12/22/2020 22:18:01</publishTime>
+    </File>
+    <File Include="MailTemplates/Verify.config">
+      <publishTime>12/06/2020 19:38:40</publishTime>
+    </File>
+    <File Include="MailTemplates/VideoDoctorInvite.config">
+      <publishTime>12/06/2020 19:38:40</publishTime>
+    </File>
+    <File Include="MailTemplates/VideoInvite.config">
+      <publishTime>12/06/2020 19:38:40</publishTime>
+    </File>
+    <File Include="MailTemplates/WelcomeMail.config">
+      <publishTime>12/06/2020 19:38:40</publishTime>
     </File>
     <File Include="media/css/dataTables.bootstrap.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/dataTables.bootstrap.min.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/dataTables.bootstrap4.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/dataTables.bootstrap4.min.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/dataTables.foundation.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/dataTables.foundation.min.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/dataTables.jqueryui.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/dataTables.jqueryui.min.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/dataTables.material.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/dataTables.material.min.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/dataTables.semanticui.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/dataTables.semanticui.min.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/dataTables.uikit.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/dataTables.uikit.min.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/jquery.dataTables.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/jquery.dataTables.min.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/css/jquery.dataTables_themeroller.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/images/favicon.ico">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/images/Sorting icons.psd">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/images/sort_asc.png">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/images/sort_asc_disabled.png">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/images/sort_both.png">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/images/sort_desc.png">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/images/sort_desc_disabled.png">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.bootstrap.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.bootstrap.min.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.bootstrap4.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.bootstrap4.min.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.dataTables.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.dataTables.min.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.foundation.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.foundation.min.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.jqueryui.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.jqueryui.min.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.material.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.material.min.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.semanticui.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.semanticui.min.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.uikit.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/dataTables.uikit.min.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/jquery.dataTables.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/jquery.dataTables.min.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/js/jquery.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/resources/demo.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/resources/demo.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/resources/details_close.png">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/resources/details_open.png">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/resources/examples.php">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/resources/syntax/shCore.css">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/resources/syntax/shCore.js">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="media/resources/syntax/Syntax Highlighter license">
-      <publishTime>05/21/2020 15:38:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.js">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.min.js">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.min.map">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.slim.js">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.slim.min.js">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.slim.min.map">
-      <publishTime>01/26/2020 08:06:34</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.min.js">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.js">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.8.3.js">
-      <publishTime>01/26/2020 08:06:46</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="TextFile1.txt">
-      <publishTime>11/22/2020 08:28:12</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginConfirmation.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Account/ExternalLoginFailure.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Account/ForgotPassword.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 20:56:51</publishTime>
     </File>
     <File Include="Views/Account/ForgotPasswordConfirmation.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 21:54:04</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>07/10/2020 17:28:56</publishTime>
+      <publishTime>12/15/2020 13:28:41</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
-      <publishTime>07/10/2020 17:28:50</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Account/ResetPassword.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 21:56:10</publishTime>
     </File>
     <File Include="Views/Account/ResetPasswordConfirmation.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Account/SendCode.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Account/VerifyCode.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Account/_ExternalLoginsListPartial.cshtml">
-      <publishTime>09/19/2020 11:04:26</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Admin/Index.cshtml">
-      <publishTime>09/13/2015 16:24:28</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Auditoriums/Create.cshtml">
-      <publishTime>09/04/2020 09:40:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Auditoriums/Delete.cshtml">
-      <publishTime>07/26/2020 14:06:40</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Auditoriums/Details.cshtml">
-      <publishTime>11/23/2020 23:17:19</publishTime>
+      <publishTime>12/22/2020 16:00:08</publishTime>
     </File>
     <File Include="Views/Auditoriums/Edit.cshtml">
-      <publishTime>11/29/2020 22:00:47</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Auditoriums/Index.cshtml">
-      <publishTime>11/29/2020 22:03:43</publishTime>
+      <publishTime>12/22/2020 21:24:53</publishTime>
     </File>
     <File Include="Views/Auditoriums/Pay.cshtml">
-      <publishTime>11/29/2020 22:49:14</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Businesses/Create.cshtml">
-      <publishTime>09/04/2020 09:40:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Businesses/Delete.cshtml">
-      <publishTime>06/14/2020 12:24:02</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Businesses/Details.cshtml">
-      <publishTime>07/26/2020 14:06:38</publishTime>
+      <publishTime>12/22/2020 15:59:57</publishTime>
     </File>
     <File Include="Views/Businesses/Edit.cshtml">
-      <publishTime>11/29/2020 21:57:11</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Businesses/Index.cshtml">
-      <publishTime>11/29/2020 22:03:43</publishTime>
+      <publishTime>12/22/2020 21:55:47</publishTime>
     </File>
     <File Include="Views/Businesses/Pay.cshtml">
-      <publishTime>11/29/2020 22:47:22</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/CabsTaxis/Create.cshtml">
-      <publishTime>09/04/2020 09:40:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/CabsTaxis/Delete.cshtml">
-      <publishTime>06/22/2020 15:17:28</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/CabsTaxis/Details.cshtml">
-      <publishTime>07/28/2020 10:33:00</publishTime>
+      <publishTime>12/22/2020 15:59:57</publishTime>
     </File>
     <File Include="Views/CabsTaxis/Edit.cshtml">
-      <publishTime>11/29/2020 21:57:11</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/CabsTaxis/Index.cshtml">
-      <publishTime>11/29/2020 22:03:43</publishTime>
+      <publishTime>12/22/2020 21:56:01</publishTime>
     </File>
     <File Include="Views/CabsTaxis/Pay.cshtml">
-      <publishTime>11/29/2020 22:47:16</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Cars/Create.cshtml">
       <publishTime>02/11/2020 12:30:00</publishTime>
@@ -1034,145 +1070,145 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/11/2020 12:30:04</publishTime>
     </File>
     <File Include="Views/Doctors/Create.cshtml">
-      <publishTime>09/04/2020 09:40:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Doctors/Delete.cshtml">
-      <publishTime>06/29/2020 13:21:54</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Doctors/Details.cshtml">
-      <publishTime>07/27/2020 20:20:12</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Doctors/Edit.cshtml">
-      <publishTime>11/29/2020 21:57:11</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Doctors/Index.cshtml">
-      <publishTime>11/29/2020 22:03:43</publishTime>
+      <publishTime>12/22/2020 21:56:15</publishTime>
     </File>
     <File Include="Views/Doctors/Pay.cshtml">
-      <publishTime>11/29/2020 22:47:16</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Educations/Create.cshtml">
-      <publishTime>09/04/2020 09:40:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Educations/Delete.cshtml">
-      <publishTime>06/29/2020 15:12:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Educations/Details.cshtml">
-      <publishTime>07/27/2020 20:37:40</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Educations/Edit.cshtml">
-      <publishTime>11/29/2020 21:57:11</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Educations/Index.cshtml">
-      <publishTime>11/29/2020 22:03:43</publishTime>
+      <publishTime>12/22/2020 21:56:31</publishTime>
     </File>
     <File Include="Views/Educations/Pay.cshtml">
-      <publishTime>11/29/2020 22:47:17</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Forsales/Create.cshtml">
-      <publishTime>09/04/2020 09:40:45</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Forsales/Delete.cshtml">
-      <publishTime>06/06/2020 10:55:52</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Forsales/Details.cshtml">
-      <publishTime>07/27/2020 21:08:40</publishTime>
+      <publishTime>12/22/2020 16:00:13</publishTime>
     </File>
     <File Include="Views/Forsales/Edit.cshtml">
-      <publishTime>11/29/2020 21:57:11</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Forsales/Index.cshtml">
-      <publishTime>11/29/2020 22:03:43</publishTime>
+      <publishTime>12/22/2020 21:06:27</publishTime>
     </File>
     <File Include="Views/Forsales/Pay.cshtml">
-      <publishTime>11/30/2020 11:27:36</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>01/26/2020 08:06:16</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Home/Categories.cshtml">
-      <publishTime>07/26/2020 11:58:42</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
-      <publishTime>11/29/2020 16:00:59</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/29/2020 22:03:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Home/Search.cshtml">
-      <publishTime>11/29/2020 22:03:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Home/Success.cshtml">
-      <publishTime>11/15/2020 16:11:02</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/HotelRooms/Create.cshtml">
-      <publishTime>09/04/2020 09:40:45</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/HotelRooms/Delete.cshtml">
-      <publishTime>06/29/2020 16:36:30</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/HotelRooms/Details.cshtml">
-      <publishTime>07/27/2020 21:19:16</publishTime>
+      <publishTime>12/22/2020 15:59:57</publishTime>
     </File>
     <File Include="Views/HotelRooms/Edit.cshtml">
-      <publishTime>12/02/2020 07:26:45</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/HotelRooms/Index.cshtml">
-      <publishTime>11/29/2020 22:03:44</publishTime>
+      <publishTime>12/22/2020 21:56:53</publishTime>
     </File>
     <File Include="Views/Jobs/Create.cshtml">
-      <publishTime>09/04/2020 09:40:45</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Jobs/Delete.cshtml">
-      <publishTime>06/29/2020 18:44:46</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Jobs/Details.cshtml">
-      <publishTime>07/28/2020 09:23:10</publishTime>
+      <publishTime>12/22/2020 15:59:57</publishTime>
     </File>
     <File Include="Views/Jobs/Edit.cshtml">
-      <publishTime>11/29/2020 21:57:11</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Jobs/Index.cshtml">
-      <publishTime>11/29/2020 22:03:44</publishTime>
+      <publishTime>12/22/2020 22:42:55</publishTime>
     </File>
     <File Include="Views/Jobs/Pay.cshtml">
-      <publishTime>11/29/2020 22:49:03</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Manage/AddPhoneNumber.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Manage/ChangePassword.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Manage/Index.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Manage/ManageLogins.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Manage/SetPassword.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Manage/VerifyPhoneNumber.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Matrimonies/Create.cshtml">
-      <publishTime>09/04/2020 09:40:45</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Matrimonies/Delete.cshtml">
-      <publishTime>07/10/2020 18:29:50</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Matrimonies/Details.cshtml">
-      <publishTime>07/28/2020 10:15:24</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Matrimonies/Edit.cshtml">
-      <publishTime>11/29/2020 21:57:11</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Matrimonies/Index.cshtml">
-      <publishTime>11/29/2020 22:03:44</publishTime>
+      <publishTime>12/22/2020 22:59:11</publishTime>
     </File>
     <File Include="Views/Matrimonies/Pay.cshtml">
-      <publishTime>11/29/2020 22:47:17</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Mobiles/Create.cshtml">
       <publishTime>02/11/2020 10:50:46</publishTime>
@@ -1190,28 +1226,34 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/11/2020 10:10:02</publishTime>
     </File>
     <File Include="Views/MyAccount/AddsManage.cshtml">
-      <publishTime>11/29/2020 22:03:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/MyAccount/Dashboard.cshtml">
-      <publishTime>11/29/2020 22:03:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/MyAccount/Failed.cshtml">
-      <publishTime>11/29/2020 22:42:02</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/MyAccount/Index.cshtml">
-      <publishTime>11/29/2020 23:29:48</publishTime>
+      <publishTime>12/22/2020 15:25:29</publishTime>
+    </File>
+    <File Include="Views/MyAccount/Pay.cshtml">
+      <publishTime>12/22/2020 22:07:27</publishTime>
     </File>
     <File Include="Views/MyAccount/Payments.cshtml">
-      <publishTime>09/19/2020 22:31:16</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/MyAccount/Success.cshtml">
-      <publishTime>11/29/2020 22:39:32</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/MyAccount/UsersList.cshtml">
-      <publishTime>09/19/2020 21:04:03</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
+    </File>
+    <File Include="Views/MyAccount/ViewPlan.cshtml">
+      <publishTime>12/22/2020 15:04:11</publishTime>
     </File>
     <File Include="Views/MyAccount/Views.cshtml">
-      <publishTime>11/29/2020 22:03:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Pets/Create.cshtml">
       <publishTime>06/18/2020 14:18:37</publishTime>
@@ -1232,16 +1274,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/01/2020 13:20:41</publishTime>
     </File>
     <File Include="Views/Plans/Delete.cshtml">
-      <publishTime>08/01/2020 13:16:12</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Plans/Details.cshtml">
-      <publishTime>08/01/2020 13:16:17</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Plans/Edit.cshtml">
-      <publishTime>08/01/2020 13:20:54</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Plans/Index.cshtml">
-      <publishTime>08/04/2020 11:30:20</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/RealEstates/Create.cshtml">
       <publishTime>07/16/2020 17:44:56</publishTime>
@@ -1259,46 +1301,46 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/06/2020 09:45:02</publishTime>
     </File>
     <File Include="Views/RepairMechanics/Create.cshtml">
-      <publishTime>09/04/2020 09:40:45</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/RepairMechanics/Delete.cshtml">
-      <publishTime>07/10/2020 13:56:46</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/RepairMechanics/Details.cshtml">
-      <publishTime>07/28/2020 12:55:10</publishTime>
+      <publishTime>12/22/2020 15:59:57</publishTime>
     </File>
     <File Include="Views/RepairMechanics/Edit.cshtml">
-      <publishTime>11/29/2020 21:57:11</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/RepairMechanics/Index.cshtml">
-      <publishTime>11/29/2020 22:03:44</publishTime>
+      <publishTime>12/22/2020 21:57:38</publishTime>
     </File>
     <File Include="Views/RepairMechanics/Pay.cshtml">
-      <publishTime>11/29/2020 22:47:17</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Role/Create.cshtml">
-      <publishTime>09/04/2015 09:02:50</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Role/Index.cshtml">
-      <publishTime>09/04/2015 08:51:46</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Services/Create.cshtml">
-      <publishTime>09/04/2020 09:40:45</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Services/Delete.cshtml">
-      <publishTime>06/30/2020 21:03:44</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Services/Details.cshtml">
-      <publishTime>07/28/2020 20:17:20</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Services/Edit.cshtml">
-      <publishTime>11/29/2020 21:57:11</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Services/Index.cshtml">
-      <publishTime>11/29/2020 22:03:44</publishTime>
+      <publishTime>12/22/2020 21:57:51</publishTime>
     </File>
     <File Include="Views/Services/Pay.cshtml">
-      <publishTime>11/29/2020 22:47:17</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Services1/Create.cshtml">
       <publishTime>07/16/2020 17:40:16</publishTime>
@@ -1316,58 +1358,58 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/29/2020 20:22:55</publishTime>
     </File>
     <File Include="Views/Shared/AuthorizeFailed.cshtml">
-      <publishTime>08/27/2015 13:07:00</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Shared/Lockout.cshtml">
-      <publishTime>01/26/2020 08:06:48</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/29/2020 21:52:06</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
-      <publishTime>11/29/2020 21:52:13</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartialmobile.cshtml">
-      <publishTime>11/28/2020 14:02:18</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Shared/_PostLayout.cshtml">
-      <publishTime>08/21/2020 22:57:35</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Shared/_SearchLayout.cshtml">
-      <publishTime>08/14/2020 20:59:09</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Teachers/Create.cshtml">
-      <publishTime>09/04/2020 09:40:45</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Teachers/Delete.cshtml">
-      <publishTime>07/10/2020 12:20:36</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Teachers/Details.cshtml">
-      <publishTime>07/28/2020 22:50:52</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Teachers/Edit.cshtml">
-      <publishTime>11/29/2020 21:57:12</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Teachers/Index.cshtml">
-      <publishTime>11/29/2020 22:03:44</publishTime>
+      <publishTime>12/22/2020 21:58:04</publishTime>
     </File>
     <File Include="Views/Teachers/Pay.cshtml">
-      <publishTime>11/29/2020 22:47:17</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Users/Index.cshtml">
-      <publishTime>09/13/2015 16:25:04</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/Web.config">
-      <publishTime>01/26/2020 08:06:16</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
-      <publishTime>08/13/2020 13:18:33</publishTime>
+      <publishTime>12/06/2020 19:38:41</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/19/2020 22:33:43</publishTime>
+      <publishTime>12/06/2020 21:57:07</publishTime>
     </File>
   </ItemGroup>
 </Project>

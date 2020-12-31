@@ -251,7 +251,7 @@ namespace VOOQQ_APP.Controllers
                 cabsTaxi.EndDate = DateTime.Now;
                 db.CabsTaxis.Add(cabsTaxi);
                 db.SaveChanges();
-                return RedirectToAction("Index", "MyAccount");
+                return RedirectToAction("ViewPlan", "MyAccount", new { prime = 0, vid = cabsTaxi.VId, id = cabsTaxi.CabTaxiId });
             }
 
             return View(cabsTaxi);

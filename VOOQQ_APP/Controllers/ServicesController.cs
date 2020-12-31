@@ -261,7 +261,7 @@ namespace VOOQQ_APP.Controllers
                 services.EndDate = DateTime.Now;
                 db.Services.Add(services);
                 db.SaveChanges();
-              return RedirectToAction("Index", "MyAccount");
+                return RedirectToAction("ViewPlan", "MyAccount", new { prime = 0, vid = services.VId, id = services.ServiceId });
             }
 
             return View(services);

@@ -279,7 +279,7 @@ namespace VOOQQ_APP.Controllers
                 teacher.EndDate = DateTime.Now;
                 db.Teachers.Add(teacher);
                 db.SaveChanges();
-                return RedirectToAction("Index", "MyAccount");
+                return RedirectToAction("ViewPlan", "MyAccount", new { prime = 0, vid = teacher.VId, id = teacher.TeacherId });
             }
 
             return View(teacher);

@@ -39,7 +39,7 @@ namespace VOOQQ_APP.Models
         public double Views { get; set; }
 
         public bool Status { get; set; }
-
+        public bool Prime { get; set; }
 
     }
 
@@ -84,6 +84,7 @@ namespace VOOQQ_APP.Models
         public double Views { get; set; }
 
         public bool Status { get; set; }
+        public bool Prime { get; set; }
 
     }
 
@@ -110,6 +111,7 @@ namespace VOOQQ_APP.Models
         public DateTime Date { get; set; }
         public double Views { get; set; }
         public bool Status { get; set; }
+        public bool Prime { get; set; }
     }
     public class EducationModel
     {
@@ -142,6 +144,7 @@ namespace VOOQQ_APP.Models
         public DateTime Date { get; set; }
         public double Views { get; set; }
         public bool Status { get; set; }
+        public bool Prime { get; set; }
     }
     public class AuditoriumModel
     {
@@ -185,6 +188,7 @@ namespace VOOQQ_APP.Models
         public DateTime Date { get; set; }
         public double Views { get; set; }
         public bool Status { get; set; }
+        public bool Prime { get; set; }
     }
 
     public class CarsTaxiModel
@@ -214,6 +218,7 @@ namespace VOOQQ_APP.Models
         public DateTime Date { get; set; }
         public double Views { get; set; }
         public bool Status { get; set; }
+        public bool Prime { get; set; }
     }
     public class HotelRoomsModel
     {
@@ -283,7 +288,7 @@ namespace VOOQQ_APP.Models
         public double Views { get; set; }
 
         public bool Status { get; set; }
-
+        public bool Prime { get; set; }
     }
 
     public class ServiceModel
@@ -312,7 +317,7 @@ namespace VOOQQ_APP.Models
         public double Views { get; set; }
 
         public bool Status { get; set; }
-
+        public bool Prime { get; set; }
     }
 
 
@@ -356,7 +361,7 @@ namespace VOOQQ_APP.Models
         public double Views { get; set; }
 
         public bool Status { get; set; }
-
+        public bool Prime { get; set; }
     }
 
     public class JobModels
@@ -386,8 +391,8 @@ namespace VOOQQ_APP.Models
     public string Description { get; set; }
     
     public string Location { get; set; }
-
-    public string Image1 { get; set; }
+        public bool Prime { get; set; }
+        public string Image1 { get; set; }
     public string Image2 { get; set; }
     public string Image3 { get; set; }
     public DateTime Date { get; set; }
@@ -410,7 +415,7 @@ namespace VOOQQ_APP.Models
         public string Image1 { get; set; }
         public string UserId { get; set; }
         public string status { get; set; }
-
+         public bool Prime  { get; set; }
 
     }
     public class MyAccountModelcount
@@ -461,6 +466,7 @@ namespace VOOQQ_APP.Models
         public string Email { get; set; }
         public string Website { get; set; }
         public string BusinessCategoryName { get; set; }
+        public bool Prime { get; set; }
     }
     public class MatrimoniesModel
     {
@@ -504,6 +510,6 @@ namespace VOOQQ_APP.Models
         public double Views { get; set; }
 
         public bool Status { get; set; }
-
+        public bool Prime { get; set; }
     }
 }

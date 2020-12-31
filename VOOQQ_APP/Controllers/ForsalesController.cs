@@ -276,7 +276,7 @@ namespace VOOQQ_APP.Controllers
                 forsale.EndDate = DateTime.Now;
                 db.Forsales.Add(forsale);
                 db.SaveChanges();
-                return RedirectToAction("Index", "MyAccount");
+                return RedirectToAction("ViewPlan", "MyAccount", new { prime = 0, vid = forsale.VId, id = forsale.ForsaleId });
             }
 
             return View(forsale);

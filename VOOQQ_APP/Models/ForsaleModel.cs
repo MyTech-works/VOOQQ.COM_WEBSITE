@@ -38,5 +38,6 @@ namespace VOOQQ_APP.Models
         public double Views { get; set; }
 
         public bool Status { get; set; }
+        public bool Prime { get; set; }
     }
 }

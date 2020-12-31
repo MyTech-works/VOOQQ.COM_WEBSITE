@@ -260,7 +260,7 @@ namespace VOOQQ_APP.Controllers
                 repairMechanic.EndDate = DateTime.Now;
                 db.RepairMechanics.Add(repairMechanic);
                 db.SaveChanges();
-                return RedirectToAction("Index", "MyAccount");
+                return RedirectToAction("ViewPlan", "MyAccount", new { prime = 0, vid = repairMechanic.VId, id = repairMechanic.RepairMechanicId });
             }
 
             return View(repairMechanic);

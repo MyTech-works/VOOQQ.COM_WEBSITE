@@ -40,3 +40,22 @@ delete from	   Jobs
 delete from	   Services  
 delete from	   Teachers 
 delete from	   RepairMechanics 
+
+ 
+ 
+  insert into  [vooqqirg_testvooqq1].[dbo].[PlanMasters] ([VId]
+      ,[PlanType]
+      ,[PlanName]
+      ,[PlanDays]
+      ,[NewPrice]
+      ,[OldPrice]
+      ,[Feaures1]
+      ,[Feaures2]
+      ,[Feaures3]  
+      ,[Feaures4]
+      ,[Feaures5]
+      ,[IsActive])values(12,'Standard','Statndard',1000,599,799,'Life Time  validity ','100% Secure!','Fast Reachable','','',1),
+      (12,'Prime','Silver',15,999,1500,'15 days validity ','100% Secure!','Fast Reachable','','',1),
+      (12,'Prime','Golden',30,1999,2997,'30 days validity ','100% Secure!','Fast Reachable','','',1),
+      (12,'Prime','Platinum',180,4999,5994,'180 days validity ','100% Secure!','Fast Reachable','','',1),
+      (12,'Prime','Diamond',360,8999,11988,'360 days validity ','100% Secure!','Fast Reachable','','',1)

@@ -261,7 +261,7 @@ namespace VOOQQ_APP.Controllers
                 job.StratDate = DateTime.Now;
                 db.Jobs.Add(job);
                 db.SaveChanges();
-                return RedirectToAction("Index", "MyAccount");
+                return RedirectToAction("ViewPlan", "MyAccount", new { prime = 0, vid = job.VId, id = job.JobId });
             }
             return View(job);
         }

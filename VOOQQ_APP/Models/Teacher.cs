@@ -54,5 +54,6 @@ namespace VOOQQ_APP.Models
         [Required]
         [Display(Name = "Availability")]
         public long Availability { get; set; }
+        public bool Prime { get; set; }
     }
 }

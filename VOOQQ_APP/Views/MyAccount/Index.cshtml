@@ -464,24 +464,15 @@
 
                                         if (item.status != "1")
                                         {
-                                            <a class="btn-action" href="/Forsales/ViewPlan?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=9900"><i><span class="adstatus adstatusactive">PAY 99</span></i></a>
+                                            <a class="btn-action" href="/MyAccount/ViewPlan?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=9900"><i><span class="adstatus adstatusactive">PAY 99</span></i></a>
 
                                         }
                                         else
                                         {
                                             <ul class="sign-in">
                                                 <li class="nav-item dropdown">
-                                                    <a class="nav-link dropdown-toggle" href="/Forsales/ViewPlan?prime=0&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="lni-notepad"></i> Upgrade</a>
-                                                    @*<div class="dropdown-menu">
+                                                     <a class="btn-action" href="/MyAccount/ViewPlan?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=9900"><i><span class="adstatus adstatusactive">Upgrade</span></i></a>
 
-                                                        <a class="dropdown-item" href="/Forsales/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=39900"><i class="lni-wallet"></i> Silver PAY 399/-</a>
-                                                        <a class="dropdown-item" href="/Forsales/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=59900"><i class="lni-wallet"></i> Golden PAY 599/-</a>
-                                                        <a class="dropdown-item" href="/Forsales/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=99900"><i class="lni-wallet"></i> Platinum PAY 999/-</a>
-                                                        <a class="dropdown-item" href="/Forsales/Pay?prime=1&&vid=@item.VId&&id=@item.BusinessId&&userid=@item.UserId&&amnt=159900"><i class="lni-wallet"></i>Diamond PAY 1599/-</a>
-
-
-
-                                                    </div>*@
                                                 </li>
                                             </ul>
 

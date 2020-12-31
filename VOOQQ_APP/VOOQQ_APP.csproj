@@ -203,6 +203,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\Constant.cs" />
+    <Compile Include="Helper\MailHelper.cs" />
     <Compile Include="Helper\WaterMark.cs" />
     <Compile Include="Migrations\202008300600135_AddEDU.cs" />
     <Compile Include="Migrations\202008300600135_AddEDU.Designer.cs">
@@ -231,6 +232,10 @@
     <Compile Include="Migrations\202012050559501_new.cs" />
     <Compile Include="Migrations\202012050559501_new.Designer.cs">
       <DependentUpon>202012050559501_new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012221438308_ss.cs" />
+    <Compile Include="Migrations\202012221438308_ss.Designer.cs">
+      <DependentUpon>202012221438308_ss.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -516,6 +521,7 @@
     <Content Include="MailTemplates\VideoDoctorInvite.config" />
     <Content Include="MailTemplates\VideoInvite.config" />
     <Content Include="MailTemplates\WelcomeMail.config" />
+    <Content Include="MailTemplates\veri.config" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -661,6 +667,7 @@
     <Content Include="Views\MyAccount\Failed.cshtml" />
     <Content Include="Views\MyAccount\Success.cshtml" />
     <Content Include="Views\MyAccount\ViewPlan.cshtml" />
+    <Content Include="Views\MyAccount\Pay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -699,6 +706,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012050559501_new.resx">
       <DependentUpon>202012050559501_new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012221438308_ss.resx">
+      <DependentUpon>202012221438308_ss.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

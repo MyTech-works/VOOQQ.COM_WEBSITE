@@ -289,7 +289,7 @@ namespace VOOQQ_APP.Controllers
                 matrimony.EndDate = DateTime.Now;
                 db.Matrimony.Add(matrimony);
                 db.SaveChanges();
-                return RedirectToAction("Index", "MyAccount");
+                return RedirectToAction("ViewPlan", "MyAccount", new { prime = 0, vid = matrimony.VId, id = matrimony.MatrimonyId });
             }
 
             return View(matrimony);

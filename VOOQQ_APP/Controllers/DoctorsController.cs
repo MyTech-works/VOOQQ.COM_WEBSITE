@@ -254,7 +254,7 @@ namespace VOOQQ_APP.Controllers
                 doctors.EndDate = DateTime.Now;
                 db.Doctors.Add(doctors);
                 db.SaveChanges();
-                return RedirectToAction("Index", "MyAccount");
+                return RedirectToAction("ViewPlan", "MyAccount", new { prime = 0, vid = doctors.VId, id = doctors.DoctorId });
             }
 
             return View(doctors);

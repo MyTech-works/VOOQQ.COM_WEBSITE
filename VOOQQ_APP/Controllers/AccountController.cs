@@ -10,6 +10,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using VOOQQ_APP.Helper;
 using VOOQQ_APP.Models;
 
 namespace VOOQQ_APP.Controllers
@@ -19,7 +20,7 @@ namespace VOOQQ_APP.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
-
+        private MailHelper MailHelper = new MailHelper();
         public AccountController()
         {
         }
@@ -152,6 +153,8 @@ namespace VOOQQ_APP.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            string message = MailHelper.SendMail("wenothke@gmail.com", Request.PhysicalApplicationPath + "MailTemplates\\DoctorSignup.config");
+
             return View();
         }
 
@@ -169,12 +172,12 @@ namespace VOOQQ_APP.Controllers
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                     string message=  MailHelper.SendMail(user.Email, Request.PhysicalApplicationPath + "MailTemplates\\DoctorSignup.config");
 
                     return RedirectToAction("Index", "Home");
                 }
@@ -184,7 +187,56 @@ namespace VOOQQ_APP.Controllers
             // If we got this far, something failed, redisplay form
             return View(model);
         }
+        public void SendMail(string email)
+        {
+            try
+            {
+                string message = System.IO.File.ReadAllText(Request.PhysicalApplicationPath + "MailTemplates\\DoctorSignup.config");
+                message = message.Replace("{UserName}", email).Replace("{Password}", "Registration");
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3;
 
+                var senderEmail = new MailAddress("info@vooqq.com", "Vooqq.com");
+                var receiverEmail = new MailAddress(email, "Receiver");
+                var password = "Travel#123";
+                var sub = "Registration With Order !";
+                var body = message;
+
+
+                var smtp = new SmtpClient
+                {
+                    Host = "mail.vooqq.com",
+                    Port = 587,
+                    EnableSsl = false,
+
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    UseDefaultCredentials = false,
+                    Credentials = new NetworkCredential(senderEmail.Address, password)
+                };
+
+
+                using (var mess = new MailMessage(senderEmail, receiverEmail)
+                {
+                    Subject = "Registration Confirmation",
+                    IsBodyHtml = true,
+                    Body = body
+
+                })
+                {
+                    smtp.ServicePoint.MaxIdleTime = 1; /* without this the connection is idle too long and not terminated, times out at the server and gives sequencing errors */
+
+
+                    smtp.Send(mess);
+
+                }
+                ViewBag.data = "Please check your email";
+
+
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = "Some Error";
+            }
+        }
         public void send(string EmailID)
         {
             try
@@ -272,20 +324,22 @@ namespace VOOQQ_APP.Controllers
                 var user = await UserManager.FindByNameAsync(model.Email);
                 if (user == null || !(await UserManager.IsEmailConfirmedAsync(user.Id)))
                 {
-                    // Don't reveal that the user does not exist or is not confirmed
+                 
+
+                    // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
+                    // Send an email with this link
+                    string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
+                    var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                   // await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                    string message = MailHelper.vrifySendMail(model.Email, "<a href=\"" + callbackUrl + "\">Reset Password Link</a>", Request.PhysicalApplicationPath + "MailTemplates\\veri.config");
+
+
+                    // return RedirectToAction("ForgotPasswordConfirmation", "Account");
                     return View("ForgotPasswordConfirmation");
                 }
-
-                // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
-                // Send an email with this link
-                // string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
-                // var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
-                // await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                // return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
-
-            // If we got this far, something failed, redisplay form
-            return View(model);
+                // If we got this far, something failed, redisplay form
+                return View(model);
         }
 
         //

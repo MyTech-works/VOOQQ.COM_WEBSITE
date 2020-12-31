@@ -270,7 +270,7 @@ namespace VOOQQ_APP.Controllers
                 hotelRooms.EndDate = DateTime.Now;
                 db.HotelRooms.Add(hotelRooms);
                 db.SaveChanges();
-                return RedirectToAction("Index", "MyAccount");
+                return RedirectToAction("ViewPlan", "MyAccount", new { prime = 0, vid = hotelRooms.VId, id = hotelRooms.HotelRoomId });
             }
 
             return View(hotelRooms);

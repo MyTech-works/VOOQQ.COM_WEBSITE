@@ -257,7 +257,7 @@ namespace VOOQQ_APP.Controllers
                 education.EndDate = DateTime.Now;
                 db.Educations.Add(education);
                 db.SaveChanges();
-                return RedirectToAction("Index", "MyAccount");
+                return RedirectToAction("ViewPlan", "MyAccount", new { prime = 0, vid = education.VId, id = education.EducationId });
             }
 
             return View(education);
