@@ -212,12 +212,13 @@
 
                                                 <td data-title="Action">
                                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                        <div class="featured-box">
+                                                        <div class="featured-box ">
+                                                            
                                                             <figure>
                                                                 <div class="icon">
                                                                     @if (@item.Prime == true)
                                                                     {
-                                                                        <i class="lni-crown"></i>
+                                                                        <i class="lni-crown adstatus adstatusexpired"> Prime</i>
                                                                     }
                                                                     else
                                                                     {
@@ -226,7 +227,7 @@
                                                                 </div>
                                                                 @if (@item.Prime == true)
                                                                 {
-                                                                    <a href="#"><img class="img-fluid" style="width:400px;height:317px" src="@item.Image1" alt=""></a>
+                                                                    <a href="#"><img class="img-fluid" style="width:300px;height:200px" src="@item.Image1" alt=""></a>
                                                                 }
                                                                 else
                                                                 {
